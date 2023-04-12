@@ -1,0 +1,197 @@
+<!--
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+- Bookstore logo: https://dribbble.com/kaywebster
+- Text fonts: https://fonts.google.com/
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHERLOCK</title>
+    <link rel="icon" href="./assets/img/bookstore-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./section-break.css">
+
+    <!--Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar-->
+        <nav>
+            <!--Logo image-->
+            <div id="store-logo">
+                <img src="./assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./fiction.html">FICTION</a></li>
+                <li><a href="./non-fiction.html">NON-FICTION</a></li>
+                <li><a href="./contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <!--Banner-->
+        <section id="banner">
+
+        </section>
+    </header>
+    <main>
+        <!--Animated bookshelf-->
+        <section class="bookshelf_wrapper">
+            <ul class="books_list">
+                <li class="book_item first"></li>
+                <li class="book_item second"></li>
+                <li class="book_item third"></li>
+                <li class="book_item fourth"></li>
+                <li class="book_item fifth"></li>
+                <li class="book_item sixth"></li>
+            </ul>
+            <div class="shelf"></div>
+        </section>
+        <section id="category">
+            <!--Section break-->
+            <div class="custom-shape-divider-top-1681230531">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+            <h2>Best-sellers of all time</h2>
+            <h3>Fiction</h3>
+            <ul class="category-detail">
+                <!--Book image and price-->
+                <li>
+                    <div class="book">
+                        <a href=""><img src="./assets/img/crime1.jpg" alt="And then there were none book"></a>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="name">And then there were <br>none</span><br>
+                            <span class="author">by Agatha Christie</span><br>
+                            <span class="price">$9.99</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="book">
+                        <a href=""><img src="./assets/img/thriller1.jpg" alt="IT"></a>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="name">IT</span><br>
+                            <span class="author">by Stephen King</span><br>
+                            <span class="price">$12.99</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="book">
+                        <a href=""><img src="./assets/img/adventure1.jpg"
+                                alt="Harry Potter and the prisoner of Azkaban"></a>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="name">Harry Potter and the <br>Prisoner of Azkaban</span><br>
+                            <span class="author">by J.K.Rowling</span><br>
+                            <span class="price">$10.99</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <h3>Non-fiction</h3>
+            <ul class="category-detail">
+                <!--Book image and price-->
+                <li>
+                    <div class="book">
+                        <a href=""><img src="./assets/img/psychology1.jpg" alt="Inside the criminal mind"></a>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="name">Inside the criminal <br>mind</span><br>
+                            <span class="author">by Stanton E.Samenow</span><br>
+                            <span class="price">$8.99</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="book">
+                        <a href=""><img src="./assets/img/selfhelp1.jpg" alt="The subtle art of not giving a f"></a>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="name">The subtle art of<br>not giving a F</span><br>
+                            <span class="author">by Mark Manson</span><br>
+                            <span class="price">$10.99</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="book">
+                        <a href=""><img src="./assets/img/science2.jpg" alt="Big ideas simply explained-Physics"></a>
+                    </div>
+                    <div>
+                        <p>
+                            <span class="name">Big ideas - <br>The Physics book</span><br>
+                            <span class="author">by DK</span><br>
+                            <span class="price">$12.99</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!--Section break-->
+            <div class="custom-shape-divider-bottom-1681230673">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        <!--Section break-->
+        <section class="section-break">
+            <p>
+                <em>“Reality does not always give us the life that we desire, <br>
+                    but we can always find what we desire
+                    between the pages of books.”</em><br>
+                <strong>―Adelise M. Cullens</strong>
+            </p>
+            <!--Blue color palette-->
+            <div id="palette-container">
+                <div class="palette first"></div>
+                <div class="palette second"></div>
+                <div class="palette third"></div>
+                <div class="palette fourth"></div>
+                <div class="palette fifth"></div>
+            </div>
+        </section>
+        <!--Media (video...)-->
+        <section>
+
+        </section>
+    </main>
+    <footer>
+        <!--About us, privacy policy, terms, copyright, (page) Contact us-->
+    </footer>
+
+</body>
+
+</html>

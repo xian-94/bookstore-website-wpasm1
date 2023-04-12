@@ -1,0 +1,175 @@
+/*
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+
+ */
+/* Variables for color */
+:root {
+    --primary: #769FCD;
+    --grey: #E5E5E5;
+    --dark-blue: #597799;
+    --light-blue: #D6E6F2;
+    --dark-neutral: #4D4D4D;
+    --nude: #FCECD6;
+    --complement-light: #CCAD76;
+    --complement-dark: #806330;
+}
+
+/* General */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--dark-neutral);
+    overscroll-behavior: none;
+    background-color: var(--nude);
+
+}
+a {
+    text-decoration: none;
+    color: var(--dark-neutral);
+}
+
+a:hover {
+    color: var(--complement-light);
+    opacity: 0.5;
+}
+
+img {
+    width: 150px;
+    height: 250px;
+}
+
+/* Bookstore logo */
+#store-logo {
+    display: flex;
+    margin-left: -20%;
+}
+#store-logo img {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+#store-logo p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size:larger;
+    color: var(--dark-blue);
+    letter-spacing: .2em;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: var(--light-blue);
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 5em;
+    font-weight: bold;
+}
+
+nav a:hover {
+    border-bottom: 3px solid var(--complement-dark);
+}
+
+
+/* Background */
+#banner {
+    background-image: url(./assets/img/background_img.jpg);
+    height: 800px;
+    filter:blur(3px);
+    
+}
+
+/* Category section */
+#category {
+    margin-top: 15%;
+    background: linear-gradient(to bottom, var(--light-blue), var(--grey));
+    padding-bottom: 10%;
+    padding-top: 10%;
+    position: relative;
+}
+
+#category h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: xx-large;
+    border-radius: 25px;
+    color: var(--dark-neutral);
+
+}
+
+/* Section break head*/
+.custom-shape-divider-top-1681230531 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1681230531 svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 271px;
+}
+
+.custom-shape-divider-top-1681230531 .shape-fill {
+    fill: #EFEFEF;
+}
+
+/* Section break foot */
+.custom-shape-divider-bottom-1681230673 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1681230673 svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 106px;
+}
+
+.custom-shape-divider-bottom-1681230673 .shape-fill {
+    fill: #EFEFEF;
+}
+
+/* Book detail*/
+.category-detail {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.category-detail li p {
+    text-align: center;
+}
+
+.book {
+    box-shadow: px 10px 15px var(--dark-neutral);
+    box-sizing: border-box;
+}
+
+/* Category section break */
+.section-break p {
+    font-size: 1.2em;
+    text-align: center;
+}
+
