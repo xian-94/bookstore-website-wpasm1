@@ -10,166 +10,239 @@ Acknowledgement:
  */
 /* Variables for color */
 :root {
-    --primary: #769FCD;
-    --grey: #E5E5E5;
-    --dark-blue: #597799;
-    --light-blue: #D6E6F2;
-    --dark-neutral: #4D4D4D;
-    --nude: #FCECD6;
-    --complement-light: #CCAD76;
-    --complement-dark: #806330;
+  --dark: #23303d;
+  --dark-green: #395159;
+  --light-green:#90A3A7;
+  --grey:#EFEFEF;
+  --dark-brown:#935430;
+  --light-brown:#cba688;
 }
 
 /* General */
+* {
+    scroll-behavior: smooth;
+}
+html {
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+}
 body {
-    font-family: 'Noto Sans', sans-serif;
-    color: var(--dark-neutral);
-    overscroll-behavior: none;
-    background-color: var(--nude);
-
+  font-family: "Noto Sans", sans-serif;
+  color: var(--dark);
+  overscroll-behavior: none;
+  background-color: white;
 }
 a {
-    text-decoration: none;
-    color: var(--dark-neutral);
+  text-decoration: none;
+  color: var(--dark);
 }
 
 a:hover {
-    color: var(--complement-light);
-    opacity: 0.5;
+  color: var(--light-brown);
 }
 
 img {
-    width: 150px;
-    height: 250px;
+  width: 150px;
+  height: 250px;
 }
 
 /* Bookstore logo */
 #store-logo {
-    display: flex;
-    margin-left: -20%;
+  display: flex;
+  margin-left: -20%;
 }
 #store-logo img {
-    width: 50px;
-    height: 50px;
-    position: relative;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 10px;
 }
 #store-logo p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size:larger;
-    color: var(--dark-blue);
-    letter-spacing: .2em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 1.5em;
+  color: var(--dark-brown);
+  letter-spacing: 0.2em;
 }
 
 /* Navigation bar */
 nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    background-color: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: var(--dark-green);
 }
 
 nav li {
-    list-style: none;
-    display: inline-block;
-    padding-left: 5em;
-    font-weight: bold;
+  list-style: none;
+  display: inline-block;
+  padding-left: 5em;
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive;
+}
+
+nav a {
+  color: var(--grey);
 }
 
 nav a:hover {
-    border-bottom: 3px solid var(--complement-dark);
+  border-bottom: 3px solid var(--dark-brown);
+  opacity: 0.5;
 }
-
 
 /* Background */
 #banner {
-    background-image: url(./assets/img/background_img.jpg);
-    height: 800px;
-    filter:blur(3px);
-    
+  background-image: url(./assets/img/background2.jpg);
+  height: 800px;
+  filter: blur(4px);
 }
 
 /* Category section */
 #category {
-    margin-top: 15%;
-    background: linear-gradient(to bottom, var(--light-blue), var(--grey));
-    padding-bottom: 10%;
-    padding-top: 10%;
-    position: relative;
+  margin-top: 15%;
+  padding-bottom: 10%;
+  position: relative;
+  color: var(--nude);
+  background: linear-gradient(to bottom, white, var(--grey));
 }
 
-#category h2 {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 5px;
-    font-size: xx-large;
-    border-radius: 25px;
-    color: var(--dark-neutral);
-
+h2 {
+  text-align: center;
+  font-family: "Caveat", cursive;
+  letter-spacing: 5px;
+  font-size: 5em;
+  border-radius: 25px;
+  color: var(--dark);
 }
 
-/* Section break head*/
-.custom-shape-divider-top-1681230531 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+#category h3 {
+  padding-left: 2em;
+  font-family: "Caveat", cursive;
+  font-size: 3em;
+  color: var(--nude);
 }
 
-.custom-shape-divider-top-1681230531 svg {
-    position: relative;
-    display: block;
-    width: calc(131% + 1.3px);
-    height: 271px;
-}
-
-.custom-shape-divider-top-1681230531 .shape-fill {
-    fill: #EFEFEF;
-}
-
-/* Section break foot */
-.custom-shape-divider-bottom-1681230673 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-bottom-1681230673 svg {
-    position: relative;
-    display: block;
-    width: calc(131% + 1.3px);
-    height: 106px;
-}
-
-.custom-shape-divider-bottom-1681230673 .shape-fill {
-    fill: #EFEFEF;
-}
-
-/* Book detail*/
+/* Category detail*/
 .category-detail {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+  position: relative;
+}
+.category-detail ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.non-fic {
+  padding-bottom: 5%;
 }
 
 .category-detail li p {
-    text-align: center;
+  text-align: center;
 }
 
+
 .book {
-    box-shadow: px 10px 15px var(--dark-neutral);
-    box-sizing: border-box;
+  margin-left: 30px;
+  width: 200px;
+  padding: 30px;
+  border-radius: 50% 0;
+  padding-left: 65px;
+  background-color: var(--light-green);
+  box-shadow: 2px 2px 15px var(--dark-neutral);
+
+}
+
+.book img {
+  box-shadow: 10px 10px 15px var(--dark-neutral);
+  
+}
+
+.category-detail a:hover {
+  color: 0;
+  opacity: none;
+  border-radius: 0;
+  width: 210px;
+  
+}
+
+.book:hover {
+  border-radius: 0;
+  transition: all .5s linear;
+  background: linear-gradient(to bottom, var(--grey), var(--dark-green));
+  box-shadow: 10px 10px 15px var(--dark-neutral);
+}
+
+.name {
+  font-size: large;
+  font-weight: bold;
+}
+
+.author {
+  font-style: italic;
+  color: var(--dark);
+}
+
+.price {
+  font-weight: 500;
+  font-size: 1.2em;
 }
 
 /* Category section break */
 .section-break p {
-    font-size: 1.2em;
-    text-align: center;
+  position:relative;
+  z-index: 1;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 50px;
 }
 
+/* Motivation section */
+#motivation {
+  margin-top: 10%;
+}
+
+.material {
+  display: flex;
+  justify-content: space-around;
+}
+
+#motivation img {
+  height: 500px;
+  width: 400px;
+}
+
+/* Back to top arrow */
+#backtotop {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    box-shadow: 5px 5px 5px;
+    border-radius: 50%;
+    --offset: 50px;   
+    position: sticky;
+    bottom: 20px;      
+    margin-left: 95%; 
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+}
+
+#backtotop img {
+    height:30px;
+    width: 30px;
+}
+
+#backtotop:hover {
+    background-color: var(--dark-blue);
+    box-shadow: 5px 5px 5px;
+    font-size: 3.5em;
+    opacity: 1;
+    color: none;
+}
+
+
+/* Footer */
+footer {
+    background: linear-gradient(var(--dark-neutral), black);
+}
