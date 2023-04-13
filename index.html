@@ -12,6 +12,7 @@ Acknowledgement:
 -->
 <!DOCTYPE html>
 <html lang="en">
+<!--Head section-->
 
 <head>
     <meta charset="UTF-8">
@@ -29,8 +30,10 @@ Acknowledgement:
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700&family=Noto+Sans:wght@300;500&display=swap"
         rel="stylesheet">
 </head>
+<!--Body section-->
 
 <body>
+    <!--Header section: navigation bar and banner-->
     <header>
         <!-- Navigation bar-->
         <nav>
@@ -47,8 +50,18 @@ Acknowledgement:
             </ul>
         </nav>
         <!--Banner-->
-        <section id="banner"></section>
+        <section id="banner">
+            <h1>Sherlock</h1>
+            <h2>Enjoy a new world <br> inside a book</h2>
+            <div class="img-container">
+                <div class="image-cover"></div>
+                <div class="image-coer"></div>
+                <img src="./assets/img/banner-book2.jpg" alt="Book in the banner">
+                <img src="./assets/img/banner-book1.jpg" alt="Book in the banner">
+            </div>
+        </section>
     </header>
+    <!--Main section: Category and Motivation-->
     <main>
         <!--Animated bookshelf-->
         <section class="bookshelf_wrapper">
@@ -62,9 +75,11 @@ Acknowledgement:
             </ul>
             <div class="shelf"></div>
         </section>
+        <!--Category section-->
         <section id="category">
             <h2>Best-sellers of all time</h2>
             <section class="category-detail fic">
+                <!--Fiction section-->
                 <h3>Fiction</h3>
                 <ul>
                     <!--Book image and price-->
@@ -81,75 +96,83 @@ Acknowledgement:
                                 </p>
                             </div>
                         </a>
-                        
                     </li>
                     <li>
-                        <div class="book">
-                            <a href=""><img src="./assets/img/thriller1.jpg" alt="IT"></a>
-                        </div>
-                        <div>
-                            <p>
-                                <span class="name">IT</span><br>
-                                <span class="author">by Stephen King</span><br>
-                                <span class="price">$12.99</span>
-                            </p>
-                        </div>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/thriller1.jpg" alt="IT">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">IT</span><br>
+                                    <span class="author">by Stephen King</span><br>
+                                    <span class="price">$12.99</span>
+                                </p>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="book">
-                            <a href=""><img src="./assets/img/adventure1.jpg"
-                                    alt="Harry Potter and the prisoner of Azkaban"></a>
-                        </div>
-                        <div>
-                            <p>
-                                <span class="name">Harry Potter and the <br>Prisoner of Azkaban</span><br>
-                                <span class="author">by J.K.Rowling</span><br>
-                                <span class="price">$10.99</span>
-                            </p>
-                        </div>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/adventure1.jpg" alt="Harry Potter and the prisoner of Azkaban">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">Harry Potter and the <br>Prisoner of Azkaban</span><br>
+                                    <span class="author">by J.K.Rowling</span><br>
+                                    <span class="price">$10.99</span>
+                                </p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </section>
+            <!--Non-fiction section-->
             <section class="category-detail non-fic">
                 <h3>Non-fiction</h3>
                 <ul>
                     <!--Book image and price-->
                     <li>
-                        <div class="book">
-                            <a href=""><img src="./assets/img/psychology1.jpg" alt="Inside the criminal mind"></a>
-                        </div>
-                        <div>
-                            <p>
-                                <span class="name">Inside the criminal <br>mind</span><br>
-                                <span class="author">by Stanton E.Samenow</span><br>
-                                <span class="price">$8.99</span>
-                            </p>
-                        </div>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/psychology1.jpg" alt="Inside the criminal mind">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">Inside the criminal <br>mind</span><br>
+                                    <span class="author">by Stanton E.Samenow</span><br>
+                                    <span class="price">$8.99</span>
+                                </p>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="book">
-                            <a href=""><img src="./assets/img/selfhelp1.jpg" alt="The subtle art of not giving a f"></a>
-                        </div>
-                        <div>
-                            <p>
-                                <span class="name">The subtle art of<br>not giving a F</span><br>
-                                <span class="author">by Mark Manson</span><br>
-                                <span class="price">$10.99</span>
-                            </p>
-                        </div>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/selfhelp1.jpg" alt="The subtle art of not giving a f">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">The subtle art of<br>not giving a F</span><br>
+                                    <span class="author">by Mark Manson</span><br>
+                                    <span class="price">$10.99</span>
+                                </p>
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <div class="book">
-                            <a href=""><img src="./assets/img/science2.jpg"
-                                    alt="Big ideas simply explained-Physics"></a>
-                        </div>
-                        <div>
-                            <p>
-                                <span class="name">Big ideas - <br>The Physics book</span><br>
-                                <span class="author">by DK</span><br>
-                                <span class="price">$12.99</span>
-                            </p>
-                        </div>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/science2.jpg" alt="Big ideas simply explained-Physics">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">Big ideas - <br>The Physics book</span><br>
+                                    <span class="author">by DK</span><br>
+                                    <span class="price">$12.99</span>
+                                </p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </section>
@@ -180,22 +203,50 @@ Acknowledgement:
                 <div class="palette fifth"></div>
             </div>
         </section>
+        <!--Motivation section-->
         <section id="motivation">
+            <!--Section break-->
+            <div class="custom-shape-divider-top-1681230531">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
             <h2>Build your reading habit with us</h2>
-            <div class="material">
+            <section id="vid-material">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/AUw7laSlcbo"
                     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
                     clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                 </iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ChKXTuCBg6U"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+                web-share" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section id="reading-challenge">
                 <div>
+                    <h3>Not sure where to start? <br>
+                        Let's join our <span class="title">30-day Reading Challenge</span></h3>
+                    <ol>
+                        <li>Choose a book according to the reading challenge</li>
+                        <li>Eliminate distractions.</li>
+                        <li>Find a quiet and comfy place</li>
+                        <li>LET'S SHOOT IT!!</li>
+                    </ol>
+                </div>
+                <div class="img-container">
+                    <div class="img-cover"></div>
                     <img src="./assets/img/reading-challege.jpg" alt="30 days reading challenge">
                 </div>
-            </div>
+            </section>
+        </section>
     </main>
     <footer>
         <section id="aboutus">
             <h3>About us</h2>
-        </section> 
+        </section>
         <section id="terms-policy">
             <h3>Terms & Privacy Policy</h2>
         </section>

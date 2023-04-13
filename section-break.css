@@ -311,3 +311,24 @@ Acknowledgement:
 .custom-shape-divider-bottom-1681230673 .shape-fill {
   fill: white;
 }
+
+/* Section break head motivation */
+.custom-shape-divider-top-1681230531 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1681230531 svg {
+  position: relative;
+  display: block;
+  width: calc(131% + 1.3px);
+  height: 271px;
+}
+
+.custom-shape-divider-top-1681230531 .shape-fill {
+  fill: white;
+}
