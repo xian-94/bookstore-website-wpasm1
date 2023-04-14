@@ -12,18 +12,20 @@ Acknowledgement:
 :root {
   --dark: #23303d;
   --dark-green: #395159;
-  --light-green:#90A3A7;
-  --grey:#EFEFEF;
-  --dark-brown:#935430;
-  --light-brown:#cba688;
+  --light-green: #90a3a7;
+  --grey: #efefef;
+  --dark-brown: #935430;
+  --light-brown: #cba688;
 }
 
 /* General */
-* {
-    scroll-behavior: smooth;
-}
+*,
 html {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+  scrollbar-width: 0px;
 }
 body {
   font-family: "Noto Sans", sans-serif;
@@ -45,6 +47,11 @@ img {
   height: 250px;
 }
 
+.img-container {
+  position: relative;
+  bottom: 120px;
+}
+
 /* Bookstore logo */
 #store-logo {
   display: flex;
@@ -54,7 +61,6 @@ img {
   width: 50px;
   height: 50px;
   position: relative;
-  top: 10px;
 }
 #store-logo p {
   font-family: "Montserrat", sans-serif;
@@ -62,23 +68,42 @@ img {
   font-size: 1.5em;
   color: var(--light-blue);
   letter-spacing: 0.2em;
+  position: relative;
+  top: 10px;
 }
 
 /* Navigation bar */
+.mobile-nav-icon {
+  display: none;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  position: fixed;
+  font-size: 20px;
+  background-color: var(--dark-green);
+}
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
+  width: 100%;
   background-color: var(--dark-green);
+  position: fixed;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+nav ul {
+  display: flex;
 }
 
 nav li {
   list-style: none;
-  display: inline-block;
   padding-left: 5em;
   font-weight: bold;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
 }
 
 nav a {
@@ -92,39 +117,40 @@ nav a:hover {
 
 /* Background */
 #banner {
-  margin-top: -7%;
-  background-image: url(./assets/img/background2.jpg);
-  height: 100%;
+  background-image: url(./assets/img/background.jpg);
+  height: 800px;
+  width: 100%;
   background-size: cover;
-  opacity: 0.8;
 }
 
 #banner .img-container {
   position: relative;
-  left: 50%;
-  top: -300px;
+  right: 5%;
+  top: -200px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-#banner  img {
+#banner img {
   width: 20%;
   height: 15%;
   padding-left: 3em;
   transform: skew(5deg 5deg);
-  box-shadow: 15px 10px  var(--dark-neutral);
+  box-shadow: 15px 10px var(--light-green);
 }
 
 #banner .image-cover {
   position: absolute;
-
 }
 
 #banner h1 {
   position: relative;
   top: 200px;
   left: 8%;
-  letter-spacing:5px;
+  letter-spacing: 5px;
   color: var(--light-blue);
   font-size: 7em;
+  text-shadow: 5px 10px black;
 }
 
 #banner h2 {
@@ -139,10 +165,8 @@ nav a:hover {
   margin-top: 15%;
   padding-bottom: 10%;
   position: relative;
-  color: var(--nude);
   background: linear-gradient(to bottom, white, var(--grey));
 }
-
 
 h2 {
   text-align: center;
@@ -154,10 +178,10 @@ h2 {
 }
 
 #category h3 {
-  padding-left: 2em;
+  padding: 1.5em 0 1.5em 2em;
   font-family: "Caveat", cursive;
   font-size: 3em;
-  color: var(--nude);
+  text-decoration: overline 5px var(--dark-brown);
 }
 
 /* Category detail*/
@@ -170,30 +194,28 @@ h2 {
   justify-content: space-around;
 }
 
-
 .non-fic {
   padding-bottom: 5%;
 }
 
 .category-detail li p {
   text-align: center;
+  margin-top: 20px;
 }
-
 
 .book {
   margin-left: 30px;
   width: 200px;
   padding: 30px;
-  border-radius: 50% 0;
+  border-radius: 50% 50% 0 0;
   padding-left: 65px;
-  background-color: var(--light-green);
-  box-shadow: 2px 2px 15px var(--dark-neutral);
-  opacity: 0.5;
+  background: linear-gradient(to bottom, var(--grey), var(--dark-green));
+  box-shadow: 2px 2px 15px var(--dark);
 }
 
 .book img {
-  box-shadow: 10px 10px 15px var(--dark-neutral);
-  
+  box-shadow: 10px 10px 15px var(--dark);
+  margin-top: 20px;
 }
 
 .category-detail a:hover {
@@ -201,14 +223,13 @@ h2 {
   opacity: none;
   border-radius: 0;
   width: 210px;
-  
 }
 
 .book:hover {
   border-radius: 0;
-  transition: all .5s linear;
-  background: linear-gradient(to bottom, var(--light-green), var(--dark-green));
-  box-shadow: 10px 10px 15px var(--dark-neutral);
+  transition: all 0.5s linear;
+  background: linear-gradient(90deg, var(--light-green), var(--dark-green));
+  box-shadow: 10px 10px 15px var(--dark);
   opacity: 1;
 }
 
@@ -229,7 +250,7 @@ h2 {
 
 /* Category section break */
 .section-break p {
-  position:relative;
+  position: relative;
   z-index: 1;
   font-size: 1.2em;
   text-align: center;
@@ -240,7 +261,7 @@ h2 {
 #motivation {
   margin-top: 15%;
   background-color: var(--light-green);
-  position:relative;
+  position: relative;
   padding-top: 10%;
   padding-bottom: 20%;
 }
@@ -249,39 +270,42 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 20px;
 }
 
 #reading-challenge {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding-top: 50px;
+  margin-top: 100px;
 }
 
 #reading-challenge h3 {
   font-size: 2em;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
+  padding-left: 100px;
+  
 }
 
 .title {
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 1.5em;
 }
 
 #reading-challenge ol {
   font-size: larger;
+  padding-left: 200px;
+  padding-top: 50px;
+
 }
 
-.img-container {
-  position: relative;
-  right: 25%;
-  bottom: 120px;
+#reading-challenge .img-container {
+  margin-left: 15%;
 }
 
 #reading-challenge img {
   height: 500px;
   width: 400px;
-  position:absolute;
+  position: absolute;
   z-index: 0;
   transform: rotate(10deg);
 }
@@ -305,37 +329,332 @@ h2 {
   transition: 2s linear;
 }
 
+/* Footer */
+footer {
+  background: linear-gradient(var(--dark-neutral), black);
+}
 
-/* Back to top arrow */
+/* Back to top button */
 #backtotop {
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    box-shadow: 5px 5px 5px;
-    border-radius: 50%;
-    --offset: 50px;   
-    position: sticky;
-    bottom: 20px;      
-    margin-left: 95%; 
-    place-self: end;
-    margin-top: calc(100vh + var(--offset));
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  box-shadow: 5px 5px 5px;
+  border-radius: 50%;
+  --offset: 50px;
+  position: fixed;
+  bottom: 20px;
+  margin-left: 95%;
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  opacity: 0.4;
 }
 
 #backtotop img {
-    height:40px;
-    width: 50px;
+  height: 40px;
+  width: 50px;
 }
 
 #backtotop:hover {
+  background-color: var(--dark-brown);
+  box-shadow: 5px 5px 5px;
+  font-size: 3.5em;
+  opacity: 1;
+  color: none;
+  opacity: 1;
+}
+
+/* Audio */
+audio {
+  opacity: 0.5;
+  --offset: 50px;
+  position: fixed;
+  bottom: 20px;
+  margin-right: 95%;
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  width: 200px;
+}
+
+/* Media query: Web layout on mobile devices */
+@media (max-width: 960px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Navigation bar */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 5px 20px;
+    display: none;
+    opacity: 1;
+    position: relative;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+
+  /* Display the hamburger icon and the nav bar when it's hovered*/
+  .mobile-nav-icon {
+    display: block;
+    z-index: 1;
+  }
+
+  .mobile-nav-icon:hover + nav {
+    display: block;
+  }
+
+  nav:hover {
+    display: block;
+  }
+
+  #store-logo img {
+    left: 5px;
+  }
+
+  #store-logo p {
+    left: -38%;
+  }
+
+  /* Banner */
+  #banner .img-container {
+    top: 5%;
+    left: 20%;
+  }
+
+  #banner img {
+    width: 25%;
+    height: 20%;
+    padding-left: 2em;
+  }
+
+  #banner .image-cover {
+    position: absolute;
+  }
+
+  #banner h1 {
+    top: 20px;
+    left: 25%;
+  }
+
+  #banner h2 {
+    left: 1%;
+    top: 2%;
+    font-size: 4em;
+  }
+
+  /* Done above here */
+  /* Category section */
+  #category {
+    margin-top: 15%;
+    padding-bottom: 10%;
+    position: relative;
+    background: linear-gradient(to bottom, white, var(--grey));
+  }
+
+  h2 {
+    text-align: center;
+    font-family: "Caveat", cursive;
+    letter-spacing: 5px;
+    font-size: 5em;
+    border-radius: 25px;
+    color: var(--dark);
+  }
+
+  #category h3 {
+    padding: 1.5em 0 1.5em 2em;
+    font-family: "Caveat", cursive;
+    font-size: 3em;
+    text-decoration: overline 5px var(--dark-brown);
+  }
+
+  /* Category detail*/
+  .category-detail {
+    position: relative;
+  }
+  .category-detail ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .non-fic {
+    padding-bottom: 5%;
+  }
+
+  .category-detail li p {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .book {
+    margin-left: 30px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 50% 50% 0 0;
+    padding-left: 65px;
+    background: linear-gradient(to bottom, var(--grey), var(--dark-green));
+    box-shadow: 2px 2px 15px var(--dark);
+  }
+
+  .book img {
+    box-shadow: 10px 10px 15px var(--dark);
+    margin-top: 20px;
+  }
+
+  .category-detail a:hover {
+    color: 0;
+    opacity: none;
+    border-radius: 0;
+    width: 210px;
+  }
+
+  .book:hover {
+    border-radius: 0;
+    transition: all 0.5s linear;
+    background: linear-gradient(90deg, var(--light-green), var(--dark-green));
+    box-shadow: 10px 10px 15px var(--dark);
+    opacity: 1;
+  }
+
+  .name {
+    font-size: large;
+    font-weight: bold;
+  }
+
+  .author {
+    font-style: italic;
+    color: var(--dark);
+  }
+
+  .price {
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+
+  /* Category section break */
+  .section-break p {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  /* Motivation section */
+  #motivation {
+    margin-top: 15%;
+    background-color: var(--light-green);
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+
+  #vid-material {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  #reading-challenge {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  #reading-challenge h3 {
+    font-size: 2em;
+    font-family: "Dancing Script", cursive;
+    padding-left: -100px;
+  }
+
+  .title {
+    font-family: "Caveat", cursive;
+    font-size: 1.5em;
+  }
+
+  #reading-challenge ol {
+    font-size: larger;
+    padding: 5%;
+  }
+
+  .img-container {
+    position: relative;
+    bottom: 120px;
+  }
+
+  #reading-challenge img {
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    z-index: 0;
+    transform: rotate(10deg);
+  }
+
+  /* Image cover */
+  .img-cover {
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    background-image: url(./assets/img/img_cover.png);
+    z-index: 1;
+    top: 10px;
+    transform: rotate(20deg);
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .img-cover:hover {
+    opacity: 0;
+    transition: 2s linear;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(var(--dark-neutral), black);
+  }
+
+  /* Back to top button */
+  #backtotop {
+    background-color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3em;
+    box-shadow: 5px 5px 5px;
+    border-radius: 50%;
+    --offset: 50px;
+    position: fixed;
+    bottom: 20px;
+    margin-left: 95%;
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+    opacity: 0.4;
+  }
+
+  #backtotop img {
+    height: 40px;
+    width: 50px;
+  }
+
+  #backtotop:hover {
     background-color: var(--dark-brown);
     box-shadow: 5px 5px 5px;
     font-size: 3.5em;
     opacity: 1;
     color: none;
-}
-
-
-/* Footer */
-footer {
-    background: linear-gradient(var(--dark-neutral), black);
+    opacity: 1;
+  }
 }
