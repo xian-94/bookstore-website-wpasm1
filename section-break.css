@@ -225,7 +225,8 @@ Acknowledgement:
 /* Color palette */
 /* Palette decoration for the quote */
 #palette-container {
-  margin-left: 30%;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   top: -190px;
   z-index: 0;
@@ -318,6 +319,17 @@ Acknowledgement:
 
 .custom-shape-divider-top-1681230531 .shape-fill {
   fill: white;
+}
+
+/* Book detail section-break */
+.section-break {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img img{
+  height: 200px;
+  width: 300px;
 }
 
 @media (max-width: 960px) {
