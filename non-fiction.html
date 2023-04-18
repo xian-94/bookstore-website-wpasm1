@@ -1,12 +1,277 @@
+<!--
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+- Bookstore logo: https://dribbble.com/kaywebster
+- Text fonts: https://fonts.google.com/
+
+-->
 <!DOCTYPE html>
 <html lang="en">
+<!--Head section-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SHERLOCK</title>
+    <link rel="icon" href="./assets/img/bookstore-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./section-break.css">
+
+    <!--Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700&family=Noto+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
 </head>
+<!--Body section-->
+
 <body>
-    
+    <!--Header section: navigation bar and banner-->
+    <header>
+        <!-- Navigation bar-->
+        <div class="mobile-nav-icon">☰</div>
+
+        <nav>
+            <!--Logo image-->
+            <div id="store-logo">
+                <img src="./assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./fiction.html">FICTION</a></li>
+                <li><a href="./non-fiction.html">NON-FICTION</a></li>
+                <li><a href="./contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <!--Banner-->
+        <section id="banner">
+            <h1>Sherlock</h1>
+            <h2>Enjoy a new world <br> inside a book</h2>
+            <div class="img-container">
+                <div class="image-cover"></div>
+                <div class="image-cover"></div>
+                <img src="./assets/img/banner-book2.jpg" alt="Book in the banner">
+                <img src="./assets/img/banner-book1.jpg" alt="Book in the banner">
+            </div>
+        </section>
+    </header>
+    <!--Main section: Category and Motivation-->
+    <main>
+        <!--Breadcrumb navigation-->
+        <ul class="breadcrumb">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Non-fiction</a></li>
+        </ul>
+        <!--Animated bookshelf-->
+        <section class="bookshelf_wrapper">
+            <ul class="books_list">
+                <li class="book_item first"></li>
+                <li class="book_item second"></li>
+                <li class="book_item third"></li>
+                <li class="book_item fourth"></li>
+                <li class="book_item fifth"></li>
+                <li class="book_item sixth"></li>
+            </ul>
+        </section>
+        <!--Category section-->
+        <section id="category">
+            <h2>Non-fiction</h2>
+            <section class="category-detail fic">
+                <!--Crime section-->
+                <h3>Psychology</h3>
+                <ul>
+                    <!--Book image and price-->
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/psychology1.jpg" alt="Inside the criminal mind">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">Inside the criminal mind</span><br>
+                                    <span class="author">by Stanton E. Samenow</span><br>
+                                    <span class="price">$8.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/psychology2.jpg" alt="The Lucifer effect">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">The Lucifer effect</span><br>
+                                    <span class="author">by Philip Zimbardo</span><br>
+                                    <span class="price">$11.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/psychology3.jpg" alt="How psychology works">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">How psychology works</span><br>
+                                    <span class="author">by DK</span><br>
+                                    <span class="price">$12.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--Thriller section-->
+            <section class="category-detail non-fic">
+                <h3>Science</h3>
+                <ul>
+                    <!--Book image and price-->
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/science1.jpg" alt="A brief history of Humankind">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">A brief history of Humankind</span><br>
+                                    <span class="author">by Yuval Noah Harari</span><br>
+                                    <span class="price">$12.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/science2.jpg" alt="Big ideas simply explained - The Physics book">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">Big ideas simply explained - <br>The Physics book </span><br>
+                                    <span class="author">by DK</span><br>
+                                    <span class="price">$12.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/science3.jpg" alt="A brief history of time">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">A brief history of time</span><br>
+                                    <span class="author">by Stephen Hawking</span><br>
+                                    <span class="price">$8.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="category-detail non-fic">
+                <h3>Self-help</h3>
+                <ul>
+                    <!--Book image and price-->
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/self-help1.jpg" alt="The subtle art of not giving an F">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">The subtle art of <br>not giving an F</span><br>
+                                    <span class="author">by Mark Manson</span><br>
+                                    <span class="price">$10.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/self-help2.jpg" alt="Atomic habits">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">Atomic habits</span><br>
+                                    <span class="author">by James Clear</span><br>
+                                    <span class="price">$11.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="book">
+                                <img src="./assets/img/self-help3.jpg" alt="Thinking, fast and slow">
+                            </div>
+                            <div>
+                                <p>
+                                    <span class="name">Thinking, fast and slow</span><br>
+                                    <span class="author">by Daniel Kahneman</span><br>
+                                    <span class="price">$12.99</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--Section break-->
+            <div class="custom-shape-divider-bottom-1681230673">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+        <!--Section break-->
+        <section class="section-break">
+            <p>
+                <em>In the end, we will all become stories.</em><br>
+                <strong>―Margaret Atwood</strong>
+            </p>
+            <!--Blue color palette-->
+            <div id="palette-container">
+                <div class="palette first"></div>
+                <div class="palette second"></div>
+                <div class="palette third"></div>
+                <div class="palette fourth"></div>
+                <div class="palette fifth"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="aboutus">
+            <h3>About us</h2>
+        </section>
+        <section id="terms-policy">
+            <h3>Terms & Privacy Policy</h2>
+        </section>
+        <section id="contact">
+            <h3>Contact us</h2>
+        </section>
+    </footer>
+    <a href="#" id="backtotop">
+        <img src="./assets/img/totoparrow.png" alt="back to top arrow">
+    </a>
+    <audio autoplay loop controls src="./assets/audio/background-music.mp3">
+        Your browser does not support audio play
+    </audio>
 </body>
 </html>

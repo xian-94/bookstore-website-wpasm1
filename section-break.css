@@ -12,12 +12,9 @@ Acknowledgement:
   --primary: #769FCD;
   --dark-blue: #597799;
   --light-blue: #D6E6F2;
-  --dark-neutral: #495464;
   --dark: #23303d;
-  --dark-green: #395159;
   --light-green:#90A3A7;
   --grey:#EFEFEF;
-  --dark-brown:#935430;
   --light-brown:#cba688;
 }
 
@@ -25,13 +22,13 @@ Acknowledgement:
 .bookshelf_wrapper {
   position: relative;
   top: 12em;
-  left: 12%;
-  transform: translate(-50%, -50%);
+  left: 10%;
+  transform: translate(-30%, -30%);
   display: inline-block;
 }
 .books_list {
   margin: 0 auto;
-  width: 100px;
+  width: 100%;
 }
 .book_item {
   position: absolute;
@@ -41,7 +38,7 @@ Acknowledgement:
   width: 40px;
   height: 120px;
   opacity: 0;
-  border: 5px solid var(--dark-neutral);
+  border: 5px solid var(--dark);
   transform-origin: bottom left;
   transform: translateX(20px);
   animation: travel 3000ms linear infinite;
@@ -59,7 +56,7 @@ Acknowledgement:
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: var(--dark-neutral);
+  background-color: var(--dark);
 }
 .book_item.first:after {
   top: initial;
@@ -86,8 +83,8 @@ Acknowledgement:
   left: 0;
   width: 100%;
   height: 17.5px;
-  border-top: 5px solid var(--dark-neutral);
-  border-bottom: 5px solid var(--dark-neutral);
+  border-top: 5px solid var(--dark);
+  border-bottom: 5px solid var(--dark);
 }
 .book_item.second:after,
 .book_item.fifth:after {
@@ -104,7 +101,7 @@ Acknowledgement:
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 5px solid var(--dark-neutral);
+  border: 5px solid var(--dark);
 }
 .book_item.third:after {
   top: initial;
@@ -142,7 +139,7 @@ Acknowledgement:
   left: 0px;
   width: 100%;
   height: 5px;
-  background-color: var(--dark-neutral);
+  background-color: var(--dark);
 }
 .book_item.sixth:after {
   box-sizing: border-box;
@@ -153,7 +150,7 @@ Acknowledgement:
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 5px solid var(--dark-neutral);
+  border: 5px solid var(--dark);
 }
 .book_item:nth-child(2) {
   animation-delay: 416ms;
@@ -171,10 +168,6 @@ Acknowledgement:
   animation-delay: 2083ms;
 }
 
-.shelf:after {
-  top: 400%;
-  left: 7.5%;
-}
 @keyframes move {
   from {
     background-position-x: 0;

@@ -11,11 +11,13 @@ Acknowledgement:
 /* Variables for color */
 :root {
   --dark: #23303d;
-  --dark-green: #395159;
   --light-green: #90a3a7;
   --grey: #efefef;
-  --dark-brown: #935430;
   --light-brown: #cba688;
+  --dark-nude: #ffecda;
+  --light-nude: #f9ffea;
+  --pink: #d4a5a5;
+  --blue: #a6d0e4;
 }
 
 /* General */
@@ -27,6 +29,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: 0px;
 }
+
 body {
   font-family: "Noto Sans", sans-serif;
   color: var(--dark);
@@ -43,32 +46,54 @@ a:hover {
 }
 
 img {
-  width: 150px;
+  width: 80%;
   height: 250px;
 }
 
 .img-container {
   position: relative;
   bottom: 120px;
+  width: 100%;
+}
+
+button {
+  background-color: var(--pink);
+  border: none;
+}
+
+button:hover {
+  background-color: var(--light-brown);
+}
+
+.button-content {
+  font-size: 2em;
+  color: var(--light-nude);
+}
+
+.button-content:hover {
+  color: var(--dark-nude);
 }
 
 /* Bookstore logo */
 #store-logo {
-  display: flex;
-  margin-left: -20%;
+  position: fixed;
+  top: 2%;
+  left: 10%;
+  z-index: 2;
 }
 #store-logo img {
   width: 50px;
   height: 50px;
-  position: relative;
+  position: absolute;
+  left: -50px;
 }
 #store-logo p {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: 1.5em;
-  color: var(--light-blue);
+  color: var(--dark-nude);
   letter-spacing: 0.2em;
-  position: relative;
+  position: absolute;
   top: 10px;
 }
 
@@ -81,7 +106,7 @@ img {
   padding: 5px;
   position: fixed;
   font-size: 20px;
-  background-color: var(--dark-green);
+  background-color: var(pink);
 }
 nav {
   display: flex;
@@ -89,10 +114,9 @@ nav {
   align-items: center;
   height: 80px;
   width: 100%;
-  background-color: var(--dark-green);
+  background-color: var(--dark);
   position: fixed;
-  z-index: 1;
-  opacity: 0.9;
+  z-index: 2;
 }
 
 nav ul {
@@ -103,11 +127,11 @@ nav li {
   list-style: none;
   padding-left: 5em;
   font-weight: bold;
-  font-family: "Dancing Script", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav a {
-  color: var(--grey);
+  color: white;
 }
 
 nav a:hover {
@@ -119,7 +143,6 @@ nav a:hover {
 #banner {
   background-image: url(./assets/img/background.jpg);
   height: 800px;
-  width: 100%;
   background-size: cover;
 }
 
@@ -136,7 +159,7 @@ nav a:hover {
   height: 15%;
   padding-left: 3em;
   transform: skew(5deg 5deg);
-  box-shadow: 15px 10px var(--light-green);
+  box-shadow: 15px 10px var(--light-nude);
 }
 
 #banner .image-cover {
@@ -146,9 +169,10 @@ nav a:hover {
 #banner h1 {
   position: relative;
   top: 200px;
-  left: 8%;
+  padding-left: 10%;
+  z-index: 1;
   letter-spacing: 5px;
-  color: var(--light-blue);
+  color: var(--blue);
   font-size: 7em;
   text-shadow: 5px 10px black;
 }
@@ -158,14 +182,37 @@ nav a:hover {
   z-index: 1;
   left: -25%;
   top: 200px;
-  color: var(--grey);
+  color: white;
 }
+
+/* Breadcrumb navigation */
+.breadcrumb {
+  margin: 20px 0 0 40px;
+  padding: 0 10px;
+  width: fit-content;
+  display: flex;
+}
+
+.breadcrumb li {
+  list-style: none;
+}
+
+.breadcrumb li + li:before {
+  padding: 8px;
+  content: ">>";
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+  color: var(--light-brown);
+}
+
 /* Category section */
 #category {
-  margin-top: 15%;
+  margin-top: 20%;
   padding-bottom: 10%;
   position: relative;
-  background: linear-gradient(to bottom, white, var(--grey));
+  background: linear-gradient(to bottom, white, var(--dark-nude));
 }
 
 h2 {
@@ -178,10 +225,11 @@ h2 {
 }
 
 #category h3 {
-  padding: 1.5em 0 1.5em 2em;
+  padding: 1em 0 1em 1em;
   font-family: "Caveat", cursive;
   font-size: 3em;
-  text-decoration: overline 5px var(--dark-brown);
+  color: var(--dark);
+  text-decoration: overline 5px var(--pink);
 }
 
 /* Category detail*/
@@ -194,7 +242,7 @@ h2 {
   justify-content: space-around;
 }
 
-.non-fic {
+.home-nonfic {
   padding-bottom: 5%;
 }
 
@@ -204,13 +252,9 @@ h2 {
 }
 
 .book {
-  margin-left: 30px;
   width: 200px;
-  padding: 30px;
-  border-radius: 50% 50% 0 0;
-  padding-left: 65px;
-  background: linear-gradient(to bottom, var(--grey), var(--dark-green));
-  box-shadow: 2px 2px 15px var(--dark);
+  padding: 30px 30px 30px 65px;
+  background-color: var(--grey);
 }
 
 .book img {
@@ -222,13 +266,12 @@ h2 {
   color: 0;
   opacity: none;
   border-radius: 0;
-  width: 210px;
 }
 
 .book:hover {
   border-radius: 0;
   transition: all 0.5s linear;
-  background: linear-gradient(90deg, var(--light-green), var(--dark-green));
+  background: var(--light-brown);
   box-shadow: 10px 10px 15px var(--dark);
   opacity: 1;
 }
@@ -260,9 +303,9 @@ h2 {
 /* Motivation section */
 #motivation {
   margin-top: 15%;
-  background-color: var(--light-green);
+  background: linear-gradient(to bottom, var(--blue), var(--grey));
   position: relative;
-  padding-top: 10%;
+  padding-top: 15%;
   padding-bottom: 20%;
 }
 
@@ -275,15 +318,15 @@ h2 {
 
 #reading-challenge {
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-left: 15%;
 }
 
 #reading-challenge h3 {
   font-size: 2em;
-  font-family: "Dancing Script", cursive;
-  padding-left: 100px;
-  
+  font-family: "Montserrat", sans-serif;
 }
 
 .title {
@@ -293,15 +336,12 @@ h2 {
 
 #reading-challenge ol {
   font-size: larger;
-  padding-left: 200px;
   padding-top: 50px;
-
 }
 
 #reading-challenge .img-container {
-  margin-left: 15%;
+  padding-left: 10%;
 }
-
 #reading-challenge img {
   height: 500px;
   width: 400px;
@@ -337,16 +377,12 @@ footer {
 /* Back to top button */
 #backtotop {
   background-color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 3em;
   box-shadow: 5px 5px 5px;
   border-radius: 50%;
-  --offset: 50px;
   position: fixed;
   bottom: 20px;
   margin-left: 95%;
-  place-self: end;
-  margin-top: calc(100vh + var(--offset));
+  margin-top: 95%;
   opacity: 0.4;
 }
 
@@ -357,10 +393,8 @@ footer {
 
 #backtotop:hover {
   background-color: var(--dark-brown);
-  box-shadow: 5px 5px 5px;
-  font-size: 3.5em;
-  opacity: 1;
-  color: none;
+  font-size: 2em;
+  box-shadow: 5px 5px 5px var(--light-brown);
   opacity: 1;
 }
 
@@ -378,9 +412,11 @@ audio {
 
 /* Media query: Web layout on mobile devices */
 @media (max-width: 960px) {
-  * {
+  *,
+  html {
     padding: 0;
     margin: 0;
+    width: 100%;
   }
 
   /* Navigation bar */
@@ -388,19 +424,19 @@ audio {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
-    padding: 5px 20px;
+    padding: 50px 0 10px 0;
     display: none;
-    opacity: 1;
-    position: relative;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 2;
   }
 
   nav ul {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   nav li {
-    margin-left: 0;
     margin-bottom: 10px;
     font-size: 1.2em;
   }
@@ -408,7 +444,7 @@ audio {
   /* Display the hamburger icon and the nav bar when it's hovered*/
   .mobile-nav-icon {
     display: block;
-    z-index: 1;
+    z-index: 2;
   }
 
   .mobile-nav-icon:hover + nav {
@@ -420,17 +456,17 @@ audio {
   }
 
   #store-logo img {
-    left: 5px;
+    left: -50px;
   }
 
   #store-logo p {
-    left: -38%;
+    left: 20%;
   }
 
   /* Banner */
   #banner .img-container {
     top: 5%;
-    left: 20%;
+    margin-left: -20%;
   }
 
   #banner img {
@@ -454,26 +490,9 @@ audio {
     font-size: 4em;
   }
 
-  /* Done above here */
   /* Category section */
-  #category {
-    margin-top: 15%;
-    padding-bottom: 10%;
-    position: relative;
-    background: linear-gradient(to bottom, white, var(--grey));
-  }
-
-  h2 {
-    text-align: center;
-    font-family: "Caveat", cursive;
-    letter-spacing: 5px;
-    font-size: 5em;
-    border-radius: 25px;
-    color: var(--dark);
-  }
-
   #category h3 {
-    padding: 1.5em 0 1.5em 2em;
+    text-align: center;
     font-family: "Caveat", cursive;
     font-size: 3em;
     text-decoration: overline 5px var(--dark-brown);
@@ -569,7 +588,7 @@ audio {
   }
 
   #reading-challenge {
-    display: flex;
+    flex-flow: column wrap;
     justify-content: space-around;
     align-items: center;
     margin-top: 100px;
@@ -591,9 +610,8 @@ audio {
     padding: 5%;
   }
 
-  .img-container {
-    position: relative;
-    bottom: 120px;
+  #reading-challenge .img-container {
+    margin-left: 0;
   }
 
   #reading-challenge img {
@@ -657,4 +675,118 @@ audio {
     color: none;
     opacity: 1;
   }
+}
+
+/* Book detail page */
+/* Product brief */
+#product-brief .product-container {
+  display: flex;
+  margin: 30px 0 0 80px;
+  height: fit-content;
+  width: fit-content;
+}
+
+#product-brief .side {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+#product-brief .main {
+  margin-left: 20px;
+}
+
+#product-brief .main img {
+  height: 600px;
+  width: 400px;
+}
+
+#product-brief .side img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+#product-brief .side img:hover {
+  transition: all 0.1s linear;
+  border: 2px solid var(--light-brown);
+}
+
+.info {
+  margin: 0 80px 20px 30px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: var(--grey);
+}
+
+/* Product brief content */
+#product-brief {
+  margin-bottom: 5%;
+}
+#product-brief h2,
+#product-brief h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+#product-brief h2 {
+  letter-spacing: normal;
+  font-size: 3em;
+}
+
+#product-brief h3 {
+  padding-top: 10px;
+  letter-spacing: 2px;
+  font-size: 2.5em;
+}
+.info .general {
+  display: flex;
+  justify-content: space-around;
+}
+#product-brief button {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+}
+
+#product-brief a {
+  font-style: italic;
+}
+
+
+/* About author */
+#aboutauthor {
+  margin-top: 5%;
+}
+
+#aboutauthor .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+#aboutauthor img {
+  width: 250px;
+  padding: 0 50px;
+}
+
+/* Product details section */
+#product-detail {
+  margin-top: 10px;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0 10px 0;
+}
+
+.attribute {
+  font-weight: bold;
+  width: 30%;
+}
+
+.attribute,
+.value {
+  height: 35px;
 }
