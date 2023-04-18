@@ -1,0 +1,190 @@
+<!--
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+- Bookstore logo: https://dribbble.com/kaywebster
+- Text fonts: https://fonts.google.com/
+- Book detail content: https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHERLOCK</title>
+    <link rel="icon" href="../assets/img/bookstore-logo.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./section-break.css">
+
+    <!--Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700&family=Noto+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+<!--Body section-->
+
+<body>
+    <!--Header section: navigation bar and banner-->
+    <header>
+        <!-- Navigation bar-->
+        <div class="mobile-nav-icon">☰</div>
+
+        <nav>
+            <!--Logo image-->
+            <div id="store-logo">
+                <img src="../assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="../fiction.html">FICTION</a></li>
+                <li><a href="../non-fiction.html">NON-FICTION</a></li>
+                <li><a href="../contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <!--Banner-->
+        <section id="banner">
+            <h1>Sherlock</h1>
+            <h2>Enjoy a new world <br> inside a book</h2>
+            <div class="img-container">
+                <div class="image-cover"></div>
+                <div class="image-cover"></div>
+                <img src="../assets/img/banner-book2.jpg" alt="Book in the banner">
+                <img src="../assets/img/banner-book1.jpg" alt="Book in the banner">
+            </div>
+        </section>
+    </header>
+    <!--Main section: Category and Motivation-->
+    <main>
+        <!--Breadcrumb navigation-->
+        <ul class="breadcrumb">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../fiction.html">Fiction</a></li>
+            <li><a href="#">And then there were none</a></li>
+        </ul>
+
+        <!-- Product overview -->
+        <section id="product-brief">
+            <div class="product-container">
+                <div class="image side">
+                    <img src="../assets/img/crime1a.jpg" alt="And then there were none back cover">
+                    <img src="../assets/img/crime1b.jpg" alt="And then there were none front cover">
+                    <img src="../assets/img/crime1c.jpg" alt="And then there were none actual product">
+                </div>
+                <div class="image main">
+                    <img src="../assets/img/crime1.jpg" alt="And then there were none book">
+                </div>
+                <div class="info">
+                    <h2>And then there were none</h2>
+                    <div class="info general">
+                        <p>Author: <a href="#aboutauthor">Agatha Christie</a></p>
+                        <p>Rating: ⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="info review">
+                        <p>
+                            The book that topped the international online poll held in Agatha Christie`s
+                            125th birthday year to discover which of her 80 crime books was the world’s
+                            favourite.1939. Europe teeters on the brink of war. Ten strangers are invited
+                            to Soldier Island, an isolated rock near the Devon coast. Cut off from the mainland,
+                            with their generous hosts Mr and Mrs U.N. Owen mysteriously absent, they are each
+                            accused of a terrible crime. When one of the party dies suddenly they realise they
+                            may be harbouring a murderer among their number.The 10 strangers include a reckless
+                            playboy, a troubled Harley Street doctor, a formidable judge, an uncouth detective,
+                            an unscrupulous mercenary, a God-fearing spinster, two restless servants, a highly
+                            decorated general and an anxious secretary. One by one they are picked off. Who will
+                            survive? And who is the killer? Copies of an ominous nursery rhyme hang in each room,
+                            the murders mimicking the awful fates of its Ten Little Soldier Boys.
+                        </p>
+                        <h3>$9.99</h3>
+                        <button>
+                            <p class="button-content">Add to Cart</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Product details-->
+        <section id="#product-detail">
+            <h2>Product details</h2>
+            <div class="info">
+                <table class="center">
+                    <tr>
+                        <td class="attribute">Publisher</td>
+                        <td class="value">Harper Collins (5 October 2017)</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Language</td>
+                        <td class="value">English</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Paperback</td>
+                        <td class="value">256 pages</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Reading age</td>
+                        <td class="value">Customer suggested age: 13 years old and up</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Item weight</td>
+                        <td class="value">180g</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Dimensions</td>
+                        <td class="value">12.9 x 1.63 x 19.8cm</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Country of Origin</td>
+                        <td class="value">United Kingdom</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section id="aboutauthor">
+            <h2>About author</h2>
+            <div class="info">
+                <div class="image-container">
+                    <img src="../assets/img/agatha.png" alt="">
+                </div>
+                <p>
+                    Agatha Christie was born in Torquay in 1890 and became, quite simply, the bestselling novelist
+                    in history. Her first novel, The Mysterious Affair at Styles, written towards the end of the
+                    First World War, introduced us to Hercule Poirot, who was to become the most popular detective
+                    in crime fiction since Sherlock Holmes. She is known throughout the world as the Queen of Crime.
+                    Her books have sold over a billion copies in the English language and another billion in over 100
+                    foreign countries. She is the author of 80 crime novels and short story collections, 19 plays and
+                    six novels under the name of Mary Westmacott.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="aboutus">
+            <h3>About us</h2>
+        </section>
+        <section id="terms-policy">
+            <h3>Terms & Privacy Policy</h2>
+        </section>
+        <section id="contact">
+            <h3>Contact us</h2>
+        </section>
+    </footer>
+    <a href="#" id="backtotop">
+        <img src="../assets/img/totoparrow.png" alt="back to top arrow">
+    </a>
+    <audio autoplay loop controls src="../assets/audio/background-music.mp3">
+        Your browser does not support audio play
+    </audio>
+</body>
+
+</html>
