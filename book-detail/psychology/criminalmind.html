@@ -1,0 +1,195 @@
+<!--
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+- Bookstore logo: https://dribbble.com/kaywebster
+- Text fonts: https://fonts.google.com/
+- Book detail content: https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHERLOCK</title>
+    <link rel="icon" href="../../assets/img/bookstore-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../section-break.css">
+
+    <!--Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700&family=Noto+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+<!--Body section-->
+
+<body>
+    <!--Header section: navigation bar and banner-->
+    <header>
+        <!-- Navigation bar-->
+        <div class="mobile-nav-icon">☰</div>
+
+        <nav>
+            <!--Logo image-->
+            <div id="store-logo">
+                <img src="../../assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <ul>
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../../fiction.html">FICTION</a></li>
+                <li><a href="../../non-fiction.html">NON-FICTION</a></li>
+                <li><a href="../../contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <!--Banner-->
+        <section id="banner">
+            <h1>Sherlock</h1>
+            <h2>Enjoy a new world <br> inside a book</h2>
+            <div class="img-container">
+                <div class="image-cover"></div>
+                <div class="image-cover"></div>
+                <img src="../../assets/img/banner-book2.jpg" alt="Book in the banner">
+                <img src="../../assets/img/banner-book1.jpg" alt="Book in the banner">
+            </div>
+        </section>
+    </header>
+    <!--Main section: Category and Motivation-->
+    <main>
+        <!--Breadcrumb navigation-->
+        <ul class="breadcrumb">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../non-fiction.html">Non-fiction</a></li>
+            <li><a href="#">Inside the criminal mind</a></li>
+        </ul>
+
+        <!-- Product overview -->
+        <section id="product-brief">
+            <div class="product-container">
+                <div class="image side">
+                    <img src="../../assets/img/psychology1a.jpg" alt="Inside the criminal mind back cover">
+                    <img src="../../assets/img/psychology1b.jpg" alt="Inside the criminal mind front cover">
+                    <img src="../../assets/img/psychology1c.jpeg" alt="Inside the criminal mind size">
+                </div>
+                <div class="image main">
+                    <img src="../../assets/img/psychology1.jpg" alt="Inside the criminal mind book">
+                </div>
+                <div class="info">
+                    <h2>Inside the criminal mind</h2>
+                    <div class="info general">
+                        <p>Author: <a href="#aboutauthor">Stanton E.Samenow</a></p>
+                        <p>Rating: ⭐⭐⭐</p>
+                    </div>
+                    <div class="info review">
+                        <p>
+                            From expert witness Dr. Stanton E. Samenow, a brilliant, no-nonsense profile of the criminal mind, updated to include new 
+                            influences and effective methods for dealing with hardened criminals In 1984, this groundbreaking book offered readers an 
+                            illuminating window into the workings of the criminal mind and a revolutionary approach to “habilitation.” In 2004, armed 
+                            with twenty years of additional knowledge and inside, Samenow explored the subject anew, using his vast expertise to explain 
+                            the thought patterns of those who commit the crimes we were most concerned with in the new millennium, such as domestic 
+                            violence, Internet victimization, and terrorism. The fields of criminal behavior have expanded, demanding another updated 
+                            version, which includes an exploration of computers as a vehicle for criminal conduct; new drugs and pharmaceutical 
+                            influences; exposure to the rawest forms of violence in video games, films, and television broadcasts; social media as an 
+                            arena for illicit activities; and updated genetic and biological research into whether some people are “wired” to become 
+                            criminals. Throughout, we learn from Samenow’s four decades of experience how truly vital it is to know who the criminal is 
+                            and how he or she thinks differently. Only once equipped with that crucial understanding can we reach reasonable, compassionate, 
+                            and effective solutions.
+                        </p>
+                        <h3>$8.99</h3>
+                        <button>
+                            <p class="button-content">Add to Cart</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section break -->
+        <div class="section-break img">
+            <img src="../../assets/img/sectionbreak2.png" alt="A person reading a book">
+        </div>
+        <!--Product details-->
+        <section id="#product-detail">
+            <h2>Product details</h2>
+            <div class="info">
+                <table class="center">
+                    <tr>
+                        <td class="attribute">Publisher</td>
+                        <td class="value">Crown; Revised edition (4 November 2014)</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Language</td>
+                        <td class="value">English</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Paperback</td>
+                        <td class="value">368 pages</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Item weight</td>
+                        <td class="value">261g</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Dimensions</td>
+                        <td class="value">13.06 x 1.93 x 20.27cm</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Country of Origin</td>
+                        <td class="value">India</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- Author's information-->
+        <section id="aboutauthor">
+            <h2>About author</h2>
+            <div class="info">
+                <div class="image-container">
+                    <img src="../../assets/img/samenow.png" alt="Stanton E. Samenow portrait">
+                </div>
+                <p>
+                    STANTON E. SAMENOW PhD, is a clinical psychologist who has spent 40 years as a researcher, clinician, consultant, and expert witness specializing 
+                    in criminal behavior. He has also served as an independent evaluator in adversarial child custody disputes and has been appointed to three 
+                    presidential task forces on law enforcement, victims' rights, and a drug-free America. Among numerous other national venues, he has appeared on 60 
+                    Minutes, Oprah, Good Morning America, and Larry King Live. In addition to Inside the Criminal Mind he is the author of Before It's Too Late and 
+                    Straight Talk About Criminals.
+                </p>
+            </div>
+        </section>
+        <!--Section break-->
+        <div class="section-break img">
+            <img src="../../assets/img/sectionbreak1.png" alt="A person reading a book">
+        </div>
+    </main>
+    <!-- Footer section-->
+    <footer>
+        <section id="aboutus">
+            <h3>About us</h2>
+        </section>
+        <section id="terms-policy">
+            <h3>Terms & Privacy Policy</h2>
+        </section>
+        <section id="contact">
+            <h3>Contact us</h2>
+        </section>
+    </footer>
+    <!-- Back to top arrow -->
+    <a href="#" id="backtotop">
+        <img src="../../assets/img/totoparrow.png" alt="back to top arrow">
+    </a>
+    <!-- Background music -->
+    <audio autoplay loop controls src="../../assets/audio/background-music.mp3">
+        Your browser does not support audio play
+    </audio>
+</body>
+
+</html>
