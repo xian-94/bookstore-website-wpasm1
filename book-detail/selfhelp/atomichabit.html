@@ -1,0 +1,201 @@
+<!--
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+- Bookstore logo: https://dribbble.com/kaywebster
+- Text fonts: https://fonts.google.com/
+- Book detail content: https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHERLOCK</title>
+    <link rel="icon" href="../../assets/img/bookstore-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../section-break.css">
+
+    <!--Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700&family=Noto+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+<!--Body section-->
+
+<body>
+    <!--Header section: navigation bar and banner-->
+    <header>
+        <!-- Navigation bar-->
+        <div class="mobile-nav-icon">☰</div>
+
+        <nav>
+            <!--Logo image-->
+            <div id="store-logo">
+                <img src="../../assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <ul>
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../../fiction.html">FICTION</a></li>
+                <li><a href="../../non-fiction.html">NON-FICTION</a></li>
+                <li><a href="../../contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <!--Banner-->
+        <section id="banner">
+            <h1>Sherlock</h1>
+            <h2>Enjoy a new world <br> inside a book</h2>
+            <div class="img-container">
+                <div class="image-cover"></div>
+                <div class="image-cover"></div>
+                <img src="../../assets/img/banner-book2.jpg" alt="Book in the banner">
+                <img src="../../assets/img/banner-book1.jpg" alt="Book in the banner">
+            </div>
+        </section>
+    </header>
+    <!--Main section: Category and Motivation-->
+    <main>
+        <!--Breadcrumb navigation-->
+        <ul class="breadcrumb">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../non-fiction.html">Non-fiction</a></li>
+            <li><a href="#">Atomic habits</a></li>
+        </ul>
+
+        <!-- Product overview -->
+        <section id="product-brief">
+            <div class="product-container">
+                <div class="image side">
+                    <img src="../../assets/img/self-help2a.jpg" alt="Atomic habits front cover">
+                    <img src="../../assets/img/self-help2b.jpg" alt="Atomic habits back cover">
+                    <img src="../../assets/img/self-help2c.jpg" alt="Atomic habits side cover">
+                </div>
+                <div class="image main">
+                    <img src="../../assets/img/self-help2.jpg" alt="Atomic habits book">
+                </div>
+                <div class="info">
+                    <h2>Atomic habits</h2>
+                    <div class="info general">
+                        <p>Author: <a href="#aboutauthor">James Clear</a></p>
+                        <p>Rating: ⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="info review">
+                        <p>
+                            Transform your life with tiny changes in behaviour, starting now. <br>
+                            People think that when you want to change your life, you need to think big. But world-renowned habits 
+                            expert James Clear has discovered another way. He knows that real change comes from the compound effect 
+                            of hundreds of small decisions: doing two push-ups a day, waking up five minutes early, or holding a single 
+                            short phone call. <br>
+                            He calls them atomic habits. <br>
+                            In this ground-breaking book, Clears reveals exactly how these minuscule changes can grow into such 
+                            life-altering outcomes. He uncovers a handful of simple life hacks (the forgotten art of Habit Stacking, 
+                            the unexpected power of the Two Minute Rule, or the trick to entering the Goldilocks Zone), and delves into 
+                            cutting-edge psychology and neuroscience to explain why they matter. Along the way, he tells inspiring 
+                            stories of Olympic gold medalists, leading CEOs, and distinguished scientists who have used the science of 
+                            tiny habits to stay productive, motivated, and happy. <br>
+                            These small changes will have a revolutionary effect on your career, your relationships, and your life.
+
+                        </p>
+                        <h3>$11.99</h3>
+                        <button>
+                            <p class="button-content">Add to Cart</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section break -->
+        <div class="section-break img">
+            <img src="../../assets/img/sectionbreak2.png" alt="A person reading a book">
+        </div>
+        <!--Product details-->
+        <section id="#product-detail">
+            <h2>Product details</h2>
+            <div class="info">
+                <table class="center">
+                    <tr>
+                        <td class="attribute">Publisher</td>
+                        <td class="value">Random House Business Books (October 13, 2018)</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Language</td>
+                        <td class="value">English</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Paperback</td>
+                        <td class="value">288 pages</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Reading age</td>
+                        <td class="value">13 years and up</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Item weight</td>
+                        <td class="value">398g</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Dimensions</td>
+                        <td class="value">15.4 x 2.5 x 23.3cm</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Country of Origin</td>
+                        <td class="value">USA</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- Author's information-->
+        <section id="aboutauthor">
+            <h2>About author</h2>
+            <div class="info">
+                <div class="image-container">
+                    <img src="../../assets/img/jamesclear.png" alt="James Clear portrait">
+                </div>
+                <p>
+                    James Clear is an expert on habits and decision making. He made his name as the author of one of the fastest-growing 
+                    email newsletters in history, which grew from zero to 100,000 subscribers in under two years. Today, his newsletter 
+                    has over 400,000 subscribers and his articles at <a href="https://jamesclear.com/">jamseclear.com</a> receive 10 
+                    million hits each year. His work frequently appears in publications including the New York Times, Forbes and Business 
+                    Insider.
+                </p>
+            </div>
+        </section>
+        <!--Section break-->
+        <div class="section-break img">
+            <img src="../../assets/img/sectionbreak1.png" alt="A person reading a book">
+        </div>
+    </main>
+    <!-- Footer section-->
+    <footer>
+        <section id="aboutus">
+            <h3>About us</h2>
+        </section>
+        <section id="terms-policy">
+            <h3>Terms & Privacy Policy</h2>
+        </section>
+        <section id="contact">
+            <h3>Contact us</h2>
+        </section>
+    </footer>
+    <!-- Back to top arrow -->
+    <a href="#" id="backtotop">
+        <img src="../../assets/img/totoparrow.png" alt="back to top arrow">
+    </a>
+    <!-- Background music -->
+    <audio autoplay loop controls src="../../assets/audio/background-music.mp3">
+        Your browser does not support audio play
+    </audio>
+</body>
+
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

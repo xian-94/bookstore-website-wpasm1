@@ -1,0 +1,200 @@
+<!--
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+- Bookstore logo: https://dribbble.com/kaywebster
+- Text fonts: https://fonts.google.com/
+- Book detail content: https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHERLOCK</title>
+    <link rel="icon" href="../../assets/img/bookstore-logo.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../section-break.css">
+
+    <!--Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700&family=Noto+Sans:wght@300;500&display=swap"
+        rel="stylesheet">
+</head>
+<!--Body section-->
+
+<body>
+    <!--Header section: navigation bar and banner-->
+    <header>
+        <!-- Navigation bar-->
+        <div class="mobile-nav-icon">☰</div>
+
+        <nav>
+            <!--Logo image-->
+            <div id="store-logo">
+                <img src="../../assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <ul>
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../../fiction.html">FICTION</a></li>
+                <li><a href="../../non-fiction.html">NON-FICTION</a></li>
+                <li><a href="../../contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <!--Banner-->
+        <section id="banner">
+            <h1>Sherlock</h1>
+            <h2>Enjoy a new world <br> inside a book</h2>
+            <div class="img-container">
+                <div class="image-cover"></div>
+                <div class="image-cover"></div>
+                <img src="../../assets/img/banner-book2.jpg" alt="Book in the banner">
+                <img src="../../assets/img/banner-book1.jpg" alt="Book in the banner">
+            </div>
+        </section>
+    </header>
+    <!--Main section: Category and Motivation-->
+    <main>
+        <!--Breadcrumb navigation-->
+        <ul class="breadcrumb">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../non-fiction.html">Non-fiction</a></li>
+            <li><a href="#">The subtle art of not giving a F</a></li>
+        </ul>
+
+        <!-- Product overview -->
+        <section id="product-brief">
+            <div class="product-container">
+                <div class="image side">
+                    <img src="../../assets/img/self-help1a.png" alt="The subtle art of not giving a F front cover">
+                    <img src="../../assets/img/self-help1b.png" alt="The subtle art of not giving a F side cover">
+                    <img src="../../assets/img/self-help1c.png" alt="The subtle art of not giving a F back cover">
+                </div>
+                <div class="image main">
+                    <img src="../../assets/img/self-help1.jpg" alt="The subtle art of not giving a F book">
+                </div>
+                <div class="info">
+                    <h2>The subtle art of not giving a F*ck</h2>
+                    <div class="info general">
+                        <p>Author: <a href="#aboutauthor">Mark Manson</a></p>
+                        <p>Rating: ⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="info review">
+                        <p>
+                            For decades, we`ve been told that positive thinking is the key to a happy, rich life. “Fuck positivity,” Mark Manson says. “Let`s be honest, 
+                            shit is fucked and we have to live with it.” In his wildly popular Internet blog, Manson doesn`t sugar-coat or equivocate. He tells it like 
+                            it is—a dose of raw, refreshing, honest truth that is sorely lacking today. The Subtle Art of Not Giving a F**k is his antidote to the coddling, 
+                            let`s-all-feel-good mind-set that has infected American society and spoiled a generation, rewarding them with gold medals just for showing up. <br>
+                            Manson makes the argument, backed both by academic research and well-timed poop jokes, that improving our lives hinges not on our ability to 
+                            turn lemons into lemonade, but on learning to stomach lemons better. Human beings are flawed and limited—“not everybody can be extraordinary, 
+                            there are winners and losers in society and some of it is not fair or your fault.” Manson advises us to get to know our limitations and accept 
+                            them. Once we embrace our fears, faults and uncertainties, once we stop running and avoiding and start confronting painful truths, we can begin 
+                            to find the courage, perseverance, honesty, responsibility, curiosity and forgiveness we seek. <br>
+                        </p>
+                        <h3>$10.99</h3>
+                        <button>
+                            <p class="button-content">Add to Cart</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section break -->
+        <div class="section-break img">
+            <img src="../../assets/img/sectionbreak2.png" alt="A person reading a book">
+        </div>
+        <!--Product details-->
+        <section id="#product-detail">
+            <h2>Product details</h2>
+            <div class="info">
+                <table class="center">
+                    <tr>
+                        <td class="attribute">Publisher</td>
+                        <td class="value">Harper Collins; Int edition (19 January 2017)</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Language</td>
+                        <td class="value">English</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Paperback</td>
+                        <td class="value">224 pages</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Reading age</td>
+                        <td class="value">14 years and up</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Item weight</td>
+                        <td class="value">123g</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Dimensions</td>
+                        <td class="value">13.97 x 1.42 x 20.96cm</td>
+                    </tr>
+                    <tr>
+                        <td class="attribute">Country of Origin</td>
+                        <td class="value">USA</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- Author's information-->
+        <section id="aboutauthor">
+            <h2>About author</h2>
+            <div class="info">
+                <div class="image-container">
+                    <img src="../../assets/img/markmanson.png" alt="Mark Manson portrait">
+                </div>
+                <p>
+                    Mark Manson is the #1 New York Times Bestselling author of Everything is F*cked: A Book About Hope and The Subtle 
+                    Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life, the mega-bestseller that reached #1 
+                    in fourteen different countries. Mark`s books have been translated into more than 50 languages and have sold over 
+                    12 million copies worldwide. <br>
+                    Mark runs one of the largest personal growth websites in the world, <a href="https://markmanson.net/">markmanson.net</a>, 
+                    a blog with more than two million monthly readers and half a million subscribers. His writing is often described as `self-help
+                    for people who hate self-help` — a no-BS brand of life advice and cultural commentary that has struck a chord with people 
+                    around the globe. His writing has appeared in The New York Times, Wall Street Journal, TIME Magazine, Forbes, Vice, CNN, 
+                    and Vox, among many others. He currently lives in New York City.
+                </p>
+            </div>
+        </section>
+        <!--Section break-->
+        <div class="section-break img">
+            <img src="../../assets/img/sectionbreak1.png" alt="A person reading a book">
+        </div>
+    </main>
+    <!-- Footer section-->
+    <footer>
+        <section id="aboutus">
+            <h3>About us</h2>
+        </section>
+        <section id="terms-policy">
+            <h3>Terms & Privacy Policy</h2>
+        </section>
+        <section id="contact">
+            <h3>Contact us</h2>
+        </section>
+    </footer>
+    <!-- Back to top arrow -->
+    <a href="#" id="backtotop">
+        <img src="../../assets/img/totoparrow.png" alt="back to top arrow">
+    </a>
+    <!-- Background music -->
+    <audio autoplay loop controls src="../../assets/audio/background-music.mp3">
+        Your browser does not support audio play
+    </audio>
+</body>
+
+</html>
