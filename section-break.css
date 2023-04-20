@@ -328,8 +328,17 @@ Acknowledgement:
   margin-right: auto;
 }
 .img img{
-  height: 200px;
+  height: 300px;
   width: 300px;
+}
+.homepage img {
+  height: 350px;
+  width: 500px;
+}
+
+.homepage {
+  margin-top: 5%;
+  padding-bottom: 5%;
 }
 
 @media (max-width: 960px) {
