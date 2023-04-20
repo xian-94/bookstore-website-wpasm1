@@ -63,10 +63,13 @@ img {
 button {
   background-color: var(--pink);
   border: none;
+  box-shadow: 2px 2px 5px var(--dark);
+  border-radius: 20px;
 }
 
 button:hover {
   background-color: var(--light-brown);
+  box-shadow: 2px 2px 5px var(--dark) inset;
 }
 
 .button-content {
@@ -405,6 +408,10 @@ footer {
   margin-right: auto;
 }
 
+.map {
+  margin-left: 10%;
+}
+
 /*Footer menu */
 #footer-menu {
   border-bottom: 1px solid white;
@@ -596,6 +603,59 @@ audio {
 .attribute,
 .value {
   height: 35px;
+}
+
+/* Contact us page */
+form {
+  margin: 2% 20% 2% 20%;
+  padding: 30px;
+  background-color: var(--light-green);
+  border-radius: 25px;
+  font-size: large;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--dark);
+  text-shadow: 4px 4px 5px;
+}
+
+#info-personal,
+#info-purpose {
+  padding-left: 5%;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.form-detail {
+  padding: 5% 5% 5% 25%;
+  line-height: 50px;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form select {
+  border-radius: 25px;
+  background-color: var(--grey);
+}
+
+#contact-form input:hover,
+#contact-form textarea:hover {
+  box-shadow: 2px 2px 5px inset var(--dark);
+}
+
+.buttons {
+  margin: 5% 0 0 25%;
+}
+
+.buttons button {
+  margin: 20px;
+  padding: 20px 40px;
+}
+
+.submit {
+  background-color: rgb(186, 63, 63);
 }
 
 /* Media query: Web layout on mobile devices */

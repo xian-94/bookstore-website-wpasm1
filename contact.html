@@ -64,12 +64,64 @@ Acknowledgement:
     </header>
     <!--Main section: Category and Motivation-->
     <main>
+        <h2>Contact us</h2>
         <!--Section break-->
         <div class="section-break img">
             <img src="./assets/img/sectionbreak3.png" alt="A person studying">
         </div>
+        <section id="contact-form">
+            <form action="data.php" method="post">
+                <fieldset id="info-personal">
+                    <legend>Personal information</legend>
+                    <div class="form-detail">
+                        <label for="name">Your name: </label>
+                        <input type="text" name="name" id="name" required> <br>
 
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email"> <br>
 
+                        <label for="phone">Phone number: </label>
+                        <input type="tel" name="phone" id="phone"> <br>
+
+                        <!-- Contact preference-->
+                        <p>Contact preference: </p>
+                        <input type="checkbox" name="contactpref" value="email" id="contactpref">
+                        <label for="contactpref">By mail</label>
+                        <input type="checkbox" name="contactpref" value="phone" id="contactpref">
+                        <label for="contactpref">By phone</label>
+
+                        <!--Receive newsletter-->
+                        <p>Receive weekly newsletter: </p>
+                        <input type="radio" name="receive-letter" value="yes" id="receive-letter">
+                        <label for="receive-letter">Yes</label>
+                        <input type="radio" name="receive-letter" value="no" id="receive-letter">
+                        <label for="receive-letter">No</label>
+                    </div>
+                </fieldset>
+                <fieldset id="info-purpose">
+                    <legend>Purpose</legend>
+                    <div class="form-detail">
+                        <label for="purpose-select">Choose a purpose:</label>
+                        <select name="purposes" id="purpose-select">
+                            <option value="">--Please choose a purpose--</option>
+                            <option value="sell-books">I want to sell books</option>
+                            <option value="buy-books">I want to buy books</option>
+                        </select>
+                        <br>
+                        <label for="extra-notes">Extra notes: </label> <br>
+                        <textarea name="extra-notes" id="extra-notes" cols="50" rows="10"></textarea>
+                    </div>
+                </fieldset>
+                <div class="buttons">
+                    <button class="submit " type="submit">
+                        <p class="button-content">Submit</p>
+                    </button>
+                    <button type="reset">
+                        <p class="button-content">Reset</p>
+                    </button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <section id="aboutus">
