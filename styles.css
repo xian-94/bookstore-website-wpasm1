@@ -215,7 +215,7 @@ nav a:hover {
 
 /* Category section */
 #category {
-  margin-top: 20%;
+  margin-top: 10%;
   padding-bottom: 10%;
   position: relative;
   background: linear-gradient(to bottom, white, var(--dark-nude));
@@ -313,6 +313,7 @@ h2 {
   position: relative;
   padding-top: 15%;
   padding-bottom: 20%;
+  height: 100%;
 }
 
 #vid-material {
@@ -324,7 +325,7 @@ h2 {
 
 #reading-challenge {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 50px;
   margin-left: 15%;
@@ -343,14 +344,17 @@ h2 {
 #reading-challenge ol {
   font-size: larger;
   padding-top: 50px;
+  width: 80%;
 }
 
 #reading-challenge .img-container {
-  padding-left: 10%;
+  position: relative;
+  right: 5%;
+  top: -30%;
 }
 #reading-challenge img {
-  height: 500px;
-  width: 400px;
+  height: 450px;
+  width: 350px;
   position: absolute;
   z-index: 0;
   transform: rotate(10deg);
@@ -358,8 +362,8 @@ h2 {
 
 /* Image cover */
 .img-cover {
-  height: 500px;
-  width: 400px;
+  height: 450px;
+  width: 350px;
   position: absolute;
   background-image: url(./assets/img/img_cover.png);
   z-index: 1;
@@ -386,7 +390,7 @@ footer {
 #connect,
 #footer-menu {
   margin: 10px;
-  padding: 30px 30px 30px 30px;
+  padding: 30px;
 }
 
 /* About us section */
@@ -401,15 +405,10 @@ footer {
   left: 40px;
   top: -30px;
 }
-.aboutus-content,
-.map {
+.aboutus-content {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.map {
-  margin-left: 10%;
 }
 
 /*Footer menu */
@@ -474,7 +473,7 @@ footer {
 }
 
 #backtotop:hover {
-  background-color: var(--dark-brown);
+  background-color: var(--light-green);
   font-size: 2em;
   box-shadow: 5px 5px 5px var(--light-brown);
   opacity: 1;
@@ -729,194 +728,125 @@ legend {
   }
 
   #banner h2 {
-    left: 1%;
     top: 2%;
+    left: 0;
     font-size: 4em;
+    text-align: center;
   }
+  /* TO DO BREADCRUMB
 
   /* Category section */
   #category h3 {
+    padding-left: 0;
     text-align: center;
-    font-family: "Caveat", cursive;
-    font-size: 3em;
-    text-decoration: overline 5px var(--dark-brown);
+    font-size: 4em;
   }
 
   /* Category detail*/
-  .category-detail {
-    position: relative;
+  #category {
+    margin-top: 30%;
   }
   .category-detail ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
   }
 
-  .non-fic {
+  .home-nonfic {
     padding-bottom: 5%;
   }
 
-  .category-detail li p {
-    text-align: center;
-    margin-top: 20px;
-  }
-
   .book {
-    margin-left: 30px;
-    width: 200px;
-    padding: 30px;
-    border-radius: 50% 50% 0 0;
-    padding-left: 65px;
-    background: linear-gradient(to bottom, var(--grey), var(--dark-green));
-    box-shadow: 2px 2px 15px var(--dark);
-  }
-
-  .book img {
-    box-shadow: 10px 10px 15px var(--dark);
-    margin-top: 20px;
-  }
-
-  .category-detail a:hover {
-    color: 0;
-    opacity: none;
-    border-radius: 0;
-    width: 210px;
-  }
-
-  .book:hover {
-    border-radius: 0;
-    transition: all 0.5s linear;
-    background: linear-gradient(90deg, var(--light-green), var(--dark-green));
-    box-shadow: 10px 10px 15px var(--dark);
-    opacity: 1;
-  }
-
-  .name {
-    font-size: large;
-    font-weight: bold;
-  }
-
-  .author {
-    font-style: italic;
-    color: var(--dark);
-  }
-
-  .price {
-    font-weight: 500;
-    font-size: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   /* Category section break */
   .section-break p {
-    position: relative;
-    z-index: 1;
-    font-size: 1.2em;
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
   }
 
   /* Motivation section */
   #motivation {
-    margin-top: 15%;
-    background-color: var(--light-green);
-    position: relative;
-    padding-top: 10%;
-    padding-bottom: 20%;
+    margin-top: 25%;
+    padding-top: 25%;
+    padding-bottom: 80%;
   }
 
   #vid-material {
-    display: flex;
-    justify-content: space-evenly;
+    flex-flow: column wrap;
     align-items: center;
-    margin-top: 20px;
+  }
+
+  #vid-material iframe {
+    padding-top: 30px;
+    width: 80%;
   }
 
   #reading-challenge {
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
+    display: block;
     margin-top: 100px;
-  }
-
-  #reading-challenge h3 {
-    font-size: 2em;
-    font-family: "Dancing Script", cursive;
-    padding-left: -100px;
-  }
-
-  .title {
-    font-family: "Caveat", cursive;
-    font-size: 1.5em;
-  }
-
-  #reading-challenge ol {
-    font-size: larger;
-    padding: 5%;
-  }
-
-  #reading-challenge .img-container {
     margin-left: 0;
   }
 
-  #reading-challenge img {
-    height: 500px;
-    width: 400px;
-    position: absolute;
-    z-index: 0;
-    transform: rotate(10deg);
+  #reading-challenge h3 {
+    text-align: center;
   }
 
-  /* Image cover */
-  .img-cover {
-    height: 500px;
-    width: 400px;
-    position: absolute;
-    background-image: url(./assets/img/img_cover.png);
-    z-index: 1;
-    top: 10px;
-    transform: rotate(20deg);
-    opacity: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  #reading-challenge ol {
+    margin-left: 20%;
+    padding: 80px 0;
   }
 
-  .img-cover:hover {
-    opacity: 0;
-    transition: 2s linear;
+  #reading-challenge .img-container {
+    padding-left: 0;
+    top: 40px;
+    left: 20%;
   }
 
   /* Footer */
-  footer {
-    background: linear-gradient(var(--dark-neutral), black);
+
+  #footer-menu {
+    margin: 10px 0;
+    padding: 20px 0;
+  }
+
+  #connect {
+    margin: 10px 0;
+    padding: 20px 0;
+  }
+  /*Footer menu */
+
+  #footer-menu ul {
+    flex-flow: column wrap;
+    align-items: center;
+    
+  }
+
+  #footer-menu li {
+    padding-right: 0px;
+    padding-left: 0px;
+    width: fit-content;
+  }
+
+  /* Connect with us section */
+  .media-icon {
+    display: flex;
+    margin-top: 5%;
   }
 
   /* Back to top button */
-  #backtotop {
-    background-color: white;
-    font-family: "Montserrat", sans-serif;
-    font-size: 3em;
-    box-shadow: 5px 5px 5px;
-    border-radius: 50%;
-    --offset: 50px;
-    position: fixed;
-    bottom: 20px;
-    margin-left: 95%;
-    place-self: end;
-    margin-top: calc(100vh + var(--offset));
-    opacity: 0.4;
-  }
+#backtotop {
+  background-color: white;
+  box-shadow: 5px 5px 5px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  margin-left: 95%;
+  margin-top: 95%;
+  opacity: 0.4;
+}
 
-  #backtotop img {
-    height: 40px;
-    width: 50px;
-  }
-
-  #backtotop:hover {
-    background-color: var(--dark-brown);
-    box-shadow: 5px 5px 5px;
-    font-size: 3.5em;
-    opacity: 1;
-    color: none;
-    opacity: 1;
-  }
 }
