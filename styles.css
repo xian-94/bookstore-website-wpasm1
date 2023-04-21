@@ -30,6 +30,10 @@ html {
   scrollbar-width: 0px;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
   color: var(--dark);
@@ -195,12 +199,11 @@ nav a:hover {
 .breadcrumb {
   margin: 20px 0 0 40px;
   padding: 0 10px;
-  width: fit-content;
-  display: flex;
 }
 
 .breadcrumb li {
   list-style: none;
+  display: inline;
 }
 
 .breadcrumb li + li:before {
@@ -325,10 +328,10 @@ h2 {
 
 #reading-challenge {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: 50px;
-  margin-left: 15%;
+  padding-left: 10%;
 }
 
 #reading-challenge h3 {
@@ -349,7 +352,7 @@ h2 {
 
 #reading-challenge .img-container {
   position: relative;
-  right: 5%;
+  left: -30px;
   top: -30%;
 }
 #reading-challenge img {
@@ -384,6 +387,7 @@ footer {
   display: flex;
   color: white;
   background-color: var(--dark);
+  margin-top: 30%;
 }
 
 #aboutus,
@@ -628,7 +632,7 @@ legend {
 }
 
 .form-detail {
-  padding: 5% 5% 5% 25%;
+  padding: 5% 5% 5% 10%;
   line-height: 50px;
 }
 
@@ -637,6 +641,11 @@ legend {
 #contact-form select {
   border-radius: 25px;
   background-color: var(--grey);
+}
+
+#contact-form .text {
+  height: 30px;
+  width: 300px;
 }
 
 #contact-form input:hover,
@@ -659,11 +668,14 @@ legend {
 
 /* Media query: Web layout on mobile devices */
 @media (max-width: 960px) {
-  *,
   html {
     padding: 0;
     margin: 0;
-    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 
   /* Navigation bar */
@@ -725,6 +737,7 @@ legend {
     top: 20px;
     padding-left: 0;
     text-align: center;
+    font-size: 5em;
   }
 
   #banner h2 {
@@ -733,18 +746,21 @@ legend {
     font-size: 4em;
     text-align: center;
   }
-  /* TO DO BREADCRUMB
 
   /* Category section */
   #category h3 {
     padding-left: 0;
     text-align: center;
-    font-size: 4em;
   }
 
   /* Category detail*/
   #category {
     margin-top: 30%;
+    padding-bottom: 40%;
+  }
+
+  h2 {
+    font-size: 4em;
   }
   .category-detail ul {
     flex-flow: column wrap;
@@ -771,7 +787,7 @@ legend {
   /* Motivation section */
   #motivation {
     margin-top: 25%;
-    padding-top: 25%;
+    padding-top: 40%;
     padding-bottom: 80%;
   }
 
@@ -802,12 +818,11 @@ legend {
 
   #reading-challenge .img-container {
     padding-left: 0;
-    top: 40px;
+    top: 20px;
     left: 20%;
   }
 
   /* Footer */
-
   #footer-menu {
     margin: 10px 0;
     padding: 20px 0;
@@ -822,7 +837,6 @@ legend {
   #footer-menu ul {
     flex-flow: column wrap;
     align-items: center;
-    
   }
 
   #footer-menu li {
@@ -838,15 +852,103 @@ legend {
   }
 
   /* Back to top button */
-#backtotop {
-  background-color: white;
-  box-shadow: 5px 5px 5px;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 20px;
-  margin-left: 95%;
-  margin-top: 95%;
-  opacity: 0.4;
+  #backtotop {
+    background-color: white;
+    box-shadow: 5px 5px 5px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    margin-top: 95%;
+    margin-left: 90%;
+    opacity: 0.4;
+  }
+
+  /* Breadcrumb navigation */
+  .breadcrumb {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Book detail page */
+  /* Product brief */
+  #product-brief .product-container {
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 30px 0 30px 0;
+    width: auto;
+    height: auto;
+  }
+
+  #product-brief .side {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #product-brief .main {
+    margin: 30px 0;
+  }
+
+  #product-brief .main img {
+    height: 500px;
+    width: 400px;
+  }
+
+  #product-brief .side img {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+  }
+
+  #product-brief .side img:hover {
+    transition: all 0.1s linear;
+    border: 2px solid var(--light-brown);
+  }
+
+  .info {
+    margin: 0 50px 20px 50px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--grey);
+  }
+
+  /* About author */
+  #aboutauthor .info {
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+  }
+
+  /* Contact us page */
+form {
+  margin: 2% 10% 2% 10%;
+  padding: 20px;
+  font-size: larger;
 }
+
+#info-personal,
+#info-purpose {
+  padding-left: 0;
+}
+
+.form-detail {
+  padding: 5% 5% 5% 5%;
+}
+
+#contact-form .text-label {
+  display: block;
+}
+
+#contact-form input:hover,
+#contact-form textarea:hover {
+  box-shadow: 2px 2px 5px inset var(--dark);
+}
+
+.buttons {
+  margin: 5% 0 0 25%;
+}
+
 
 }

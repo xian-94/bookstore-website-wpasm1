@@ -20,9 +20,11 @@ Acknowledgement:
 
 /* Animated bookshelf */
 .bookshelf_wrapper {
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  top: 12em;
-  left: 10%;
+  margin-top: 12em;
+  left: 15%;
   transform: translate(-30%, -30%);
   display: inline-block;
 }
@@ -225,8 +227,6 @@ Acknowledgement:
 /* Color palette */
 /* Palette decoration for the quote */
 #palette-container {
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   top: -190px;
   z-index: 0;
@@ -342,9 +342,26 @@ Acknowledgement:
 }
 
 @media (max-width: 960px) {
-  
+  /* Animated bookshelf */
+.bookshelf_wrapper {
+  top: 5em;
+  left: -20%;
+  transform: translate(-20%, -20%);
+}
+.books_list {
+  margin: 0 auto;
+  width: 100%;
+}
 
- 
+/* Wave */
+.custom-shape-divider-bottom-1681230673 svg {
+  height: 95px;
+}
+
+.custom-shape-divider-top-1681230531 svg {
+  height: 200px;
+}
+
 
 
 }
