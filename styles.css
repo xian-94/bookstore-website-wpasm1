@@ -11,13 +11,13 @@ Acknowledgement:
 /* Variables for color */
 :root {
   --dark: #23303d;
-  --light-green: #90a3a7;
   --grey: #efefef;
   --light-brown: #cba688;
   --dark-nude: #ffecda;
   --light-nude: #f9ffea;
   --pink: #d4a5a5;
   --blue: #a6d0e4;
+  --light-green: #a5d7e8;
 }
 
 /* General */
@@ -38,7 +38,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   color: var(--dark);
   overscroll-behavior: none;
-  background-color: white;
+  background: var(--grey);
 }
 p {
   line-height: 1.5em;
@@ -87,9 +87,9 @@ button:hover {
 
 /* Bookstore logo */
 .store-logo {
-  position: fixed;
-  top: 2%;
-  left: 10%;
+  position: relative;
+  top: -30px;
+  left: -15%;
   z-index: 2;
 }
 .store-logo img {
@@ -125,7 +125,6 @@ nav {
   height: 80px;
   width: 100%;
   background-color: var(--dark);
-  position: fixed;
   z-index: 2;
 }
 
@@ -221,7 +220,6 @@ nav a:hover {
   margin-top: 10%;
   padding-bottom: 10%;
   position: relative;
-  background: linear-gradient(to bottom, white, var(--dark-nude));
 }
 
 h2 {
@@ -231,6 +229,7 @@ h2 {
   font-size: 5em;
   border-radius: 25px;
   color: var(--dark);
+  text-shadow: 2px 2px 3px var(--light-brown);
 }
 
 #category h3 {
@@ -241,7 +240,47 @@ h2 {
   text-decoration: overline 5px var(--pink);
 }
 
-/* Category detail*/
+/* Bookshelf*/
+.bookshelf {
+  max-width: 1000px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+  top: 350px;
+  height: 0px;
+  box-sizing: border-box;
+  border-bottom: 16px solid var(--blue);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  pointer-events: all;
+}
+.bookshelf::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  background: linear-gradient(to bottom, var(--blue), var(--grey));
+  height: 26px;
+  width: calc(100% + 40px);
+  box-shadow: 0px -1px 6px rgba(0, 0, 0, 0.05), 0px 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+.bookshelf::after {
+  content: "";
+  height: 80px;
+  width: calc(100% + 40px);
+  position: absolute;
+  top: 42px;
+  display: block;
+  background: linear-gradient(180deg, var(--blue) 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 97% 100%, 3% 100%);
+  z-index: -1;
+}
+
 .category-detail {
   position: relative;
 }
@@ -249,10 +288,47 @@ h2 {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  pointer-events: all;
+}
+
+.bestsellers {
+  background-size: cover;
+}
+
+.bestsellers img {
+  width: 100%;
+  box-shadow: 10px 10px 15px var(--dark);
+}
+.bestsellers ul {
+  margin-top: -25%;
+}
+
+.bestsellers li {
+  margin-left: 30px;
+}
+
+.bestsellers img:hover {
+  margin-top: -30%;
+  transform: translate(0, -70px) skew(-3deg, 3deg) scale(1.2);
+  transition: 0.2s linear;
+}
+
+.home-fic h2, .home-nonfic h2 {
+  padding-bottom: 5%;
+}
+
+.home-fic {
+  margin-top: 35%;
+  margin-bottom: 15%;
+  padding-top: 10%;
+  background: url(./assets/img/cloud-background.jpg);
+
 }
 
 .home-nonfic {
-  padding-bottom: 5%;
+  padding-bottom: 15%;
+  background: url(./assets/img/cloud-background3.jpg);
+
 }
 
 .category-detail li p {
@@ -263,7 +339,8 @@ h2 {
 .book {
   width: 200px;
   padding: 30px 30px 30px 65px;
-  background-color: var(--grey);
+  border-radius: 50% 0;
+  background-color: var(--light-green);
 }
 
 .book img {
@@ -274,13 +351,12 @@ h2 {
 .category-detail a:hover {
   color: 0;
   opacity: none;
-  border-radius: 0;
 }
 
 .book:hover {
-  border-radius: 0;
+  border-radius: 50%;
   transition: all 0.5s linear;
-  background: var(--light-brown);
+  background: var(--dark-nude);
   box-shadow: 10px 10px 15px var(--dark);
   opacity: 1;
 }
@@ -300,6 +376,22 @@ h2 {
   font-size: 1.2em;
 }
 
+/* Fiction page */
+.crime, .adventure, .thriller, .selfhelp, .science, .psycho{
+  margin-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 25px;
+}
+.crime, .psycho {
+  background: linear-gradient(to bottom, var(--blue), var(--light-nude))
+}
+
+
+
+.adventure, .selfhelp {
+  background: linear-gradient(to bottom, var(--light-nude), var(--blue))
+}
+
 /* Category section break */
 .section-break p {
   position: relative;
@@ -312,7 +404,7 @@ h2 {
 /* Motivation section */
 #motivation {
   margin-top: 15%;
-  background: linear-gradient(to bottom, var(--light-nude), var(--grey));
+  background: linear-gradient(90deg, var(--pink), var(--blue));
   position: relative;
   padding-top: 15%;
   padding-bottom: 20%;
@@ -382,6 +474,28 @@ h2 {
   transition: 2s linear;
 }
 
+/* Email input */
+#reading-challenge form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  margin-left: -50px;
+}
+
+#reading-challenge .text {
+  height: 50px;
+  width: auto;
+  padding:0;
+  margin: 0;
+  border-radius: 25px;
+  font-size: 1.1em;
+}
+
+#reading-challenge .submit {
+  background-color: var(--dark);
+  text-align: center;
+}
 /* Footer */
 footer {
   display: flex;
@@ -535,7 +649,7 @@ audio {
   margin: 0 80px 20px 30px;
   padding: 10px;
   border-radius: 25px;
-  background-color: var(--grey);
+  background: linear-gradient(90deg, var(--light-green), var(--blue));
 }
 
 /* Product brief content */
@@ -636,7 +750,7 @@ legend {
   line-height: 50px;
 }
 
-#contact-form input,
+#contact-form .text,
 #contact-form textarea,
 #contact-form select {
   border-radius: 25px;
@@ -657,13 +771,25 @@ legend {
   margin: 5% 0 0 25%;
 }
 
-.buttons button {
+.submit, .reset {
   margin: 20px;
   padding: 20px 40px;
+  font-size: 1.5em;
+  border-radius: 25px;
+  color: var(--dark-nude);
+  font-weight: bold;
+}
+
+.submit:hover, .reset:hover {
+  background-color: var(--light-brown);
 }
 
 .submit {
   background-color: rgb(186, 63, 63);
+}
+
+.reset {
+  background-color: var(--pink);
 }
 
 /* Media query: Web layout on mobile devices */
@@ -922,33 +1048,31 @@ legend {
   }
 
   /* Contact us page */
-form {
-  margin: 2% 10% 2% 10%;
-  padding: 20px;
-  font-size: larger;
-}
+  form {
+    margin: 2% 10% 2% 10%;
+    padding: 20px;
+    font-size: larger;
+  }
 
-#info-personal,
-#info-purpose {
-  padding-left: 0;
-}
+  #info-personal,
+  #info-purpose {
+    padding-left: 0;
+  }
 
-.form-detail {
-  padding: 5% 5% 5% 5%;
-}
+  .form-detail {
+    padding: 5% 5% 5% 5%;
+  }
 
-#contact-form .text-label {
-  display: block;
-}
+  #contact-form .text-label {
+    display: block;
+  }
 
-#contact-form input:hover,
-#contact-form textarea:hover {
-  box-shadow: 2px 2px 5px inset var(--dark);
-}
+  #contact-form input:hover,
+  #contact-form textarea:hover {
+    box-shadow: 2px 2px 5px inset var(--dark);
+  }
 
-.buttons {
-  margin: 5% 0 0 25%;
-}
-
-
+  .buttons {
+    margin: 5% 0 0 25%;
+  }
 }

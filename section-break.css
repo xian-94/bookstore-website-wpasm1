@@ -297,7 +297,7 @@ Acknowledgement:
 }
 
 .custom-shape-divider-bottom-1681230673 .shape-fill {
-  fill: white;
+  fill: var(--grey);
 }
 
 /* Section break head motivation */
@@ -318,7 +318,7 @@ Acknowledgement:
 }
 
 .custom-shape-divider-top-1681230531 .shape-fill {
-  fill: white;
+  fill: var(--grey);
 }
 
 /* Book detail section-break */
