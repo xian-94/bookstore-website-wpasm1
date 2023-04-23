@@ -548,10 +548,10 @@ footer {
   display: block;
   position: relative;
   left: 40px;
-  top: -30px;
+  top: 40px;
 }
 .aboutus-content {
-  margin-top: 30px;
+  margin-top: 150px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1044,8 +1044,16 @@ legend {
 
   /* Connect with us section */
   .media-icon {
-    display: flex;
+    flex-direction: column;
     margin-top: 5%;
+  }
+
+  #aboutus .store-logo {
+      left: 20px;
+  }
+
+  #aboutus .store-logo p {
+    letter-spacing: 0;
   }
 
   /* Back to top button */
