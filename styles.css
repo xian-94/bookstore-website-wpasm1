@@ -7,6 +7,8 @@ Author: Truong Hong Van
 ID: 3957034
 Acknowledgement: 
 
+
+
  */
 /* Variables for color */
 :root {
@@ -115,7 +117,7 @@ button:hover {
   width: 30px;
   height: 30px;
   padding: 5px;
-  position: fixed;
+  position: absolute;
   font-size: 20px;
 }
 nav {
@@ -258,6 +260,7 @@ h2 {
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   pointer-events: all;
+
 }
 .bookshelf::before {
   content: "";
@@ -301,10 +304,26 @@ h2 {
 }
 .bestsellers ul {
   margin-top: -25%;
+  margin-left: auto;
+  margin-right: auto;
+  animation: run 10s linear infinite;
 }
 
 .bestsellers li {
   margin-left: 30px;
+}
+
+@keyframes run {
+  0% {
+    transform: translate(0, 0)
+  }
+  50% {
+    transform: translate(-10%, 0)
+  }
+  100% {
+    transform: translate(10%, 0)
+  }
+  
 }
 
 .bestsellers img:hover {
@@ -313,22 +332,21 @@ h2 {
   transition: 0.2s linear;
 }
 
-.home-fic h2, .home-nonfic h2 {
+.home-fic h2,
+.home-nonfic h2 {
   padding-bottom: 5%;
 }
 
 .home-fic {
-  margin-top: 35%;
+  margin-top: 45%;
   margin-bottom: 15%;
   padding-top: 10%;
   background: url(./assets/img/cloud-background.jpg);
-
 }
 
 .home-nonfic {
   padding-bottom: 15%;
   background: url(./assets/img/cloud-background3.jpg);
-
 }
 
 .category-detail li p {
@@ -377,19 +395,24 @@ h2 {
 }
 
 /* Fiction page */
-.crime, .adventure, .thriller, .selfhelp, .science, .psycho{
+.crime,
+.adventure,
+.thriller,
+.selfhelp,
+.science,
+.psycho {
   margin-top: 5%;
   padding-bottom: 5%;
   border-radius: 25px;
 }
-.crime, .psycho {
-  background: linear-gradient(to bottom, var(--blue), var(--light-nude))
+.crime,
+.psycho {
+  background: linear-gradient(to bottom, var(--blue), var(--light-nude));
 }
 
-
-
-.adventure, .selfhelp {
-  background: linear-gradient(to bottom, var(--light-nude), var(--blue))
+.adventure,
+.selfhelp {
+  background: linear-gradient(to bottom, var(--light-nude), var(--blue));
 }
 
 /* Category section break */
@@ -486,7 +509,7 @@ h2 {
 #reading-challenge .text {
   height: 50px;
   width: auto;
-  padding:0;
+  padding: 0;
   margin: 0;
   border-radius: 25px;
   font-size: 1.1em;
@@ -495,6 +518,10 @@ h2 {
 #reading-challenge .submit {
   background-color: var(--dark);
   text-align: center;
+  padding-bottom: 50px;
+  font-size: 1.1em;
+  border-radius: 60px;
+  height: 30px;
 }
 /* Footer */
 footer {
@@ -643,6 +670,9 @@ audio {
 #product-brief .side img:hover {
   transition: all 0.1s linear;
   border: 2px solid var(--light-brown);
+  height: 300px;
+  width: 200px;
+  margin-left: 20%;
 }
 
 .info {
@@ -771,7 +801,8 @@ legend {
   margin: 5% 0 0 25%;
 }
 
-.submit, .reset {
+.submit,
+.reset {
   margin: 20px;
   padding: 20px 40px;
   font-size: 1.5em;
@@ -780,7 +811,8 @@ legend {
   font-weight: bold;
 }
 
-.submit:hover, .reset:hover {
+.submit:hover,
+.reset:hover {
   background-color: var(--light-brown);
 }
 
@@ -827,6 +859,7 @@ legend {
   /* Display the hamburger icon and the nav bar when it's hovered*/
   .mobile-nav-icon {
     display: block;
+    opacity: 0.7;
     z-index: 2;
     background-color: var(--grey);
   }
@@ -839,8 +872,12 @@ legend {
     display: block;
   }
 
+  .store-logo {
+    left: 100px;
+  }
+
   #store-logo img {
-    left: -50px;
+    left: 50px;
   }
 
   /* Banner */
@@ -888,10 +925,36 @@ legend {
   h2 {
     font-size: 4em;
   }
+
+  .bookshelf {
+    top: 250px;
+  }
+
+  .bestsellers ul {
+    margin-bottom: 100px;
+  }
+
+  @keyframes run {
+    0% {
+      transform: translate(0, 0)
+    }
+    50% {
+      transform: translate(-450px, 0)
+    }
+    100% {
+      transform: translate(-900px, 0)
+    }
+  }
+
   .category-detail ul {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  .home-fic {
+    margin-top: 80%;
+    padding-top: 20%;
   }
 
   .home-nonfic {
@@ -933,19 +996,27 @@ legend {
     margin-left: 0;
   }
 
-  #reading-challenge h3 {
-    text-align: center;
-  }
 
   #reading-challenge ol {
-    margin-left: 20%;
+    margin-left: 10%;
     padding: 80px 0;
   }
 
   #reading-challenge .img-container {
-    padding-left: 0;
     top: 20px;
-    left: 20%;
+    left: 10%;
+    right: auto;
+    
+  }
+
+  #reading-challenge img, #reading-challenge .img-cover {
+    height: 400px;
+    width: 300px;
+
+  }
+
+  #reading-challenge form {
+    flex-flow: column wrap;
   }
 
   /* Footer */

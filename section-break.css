@@ -334,6 +334,7 @@ Acknowledgement:
 .homepage img {
   height: 350px;
   width: 500px;
+  
 }
 
 .homepage {
@@ -362,6 +363,11 @@ Acknowledgement:
   height: 200px;
 }
 
+.homepage img{
+  margin-top: 40%;
+  height: 300px;
+  width: 350px;
+}
 
 
 }
