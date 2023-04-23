@@ -1,0 +1,178 @@
+<!--
+RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023A
+Assessment: Assignment 1
+Author: Truong Hong Van
+ID: 3957034
+Acknowledgement: 
+- Bookstore logo: https://dribbble.com/kaywebster
+- Text fonts: https://fonts.google.com/
+- Keyframes moving from right-left: https://stackoverflow.com/questions/68608981/css-animation-making-elements-moving-from-right-to-left
+- Animated bookshelf: https://codepen.io/ekfuhrmann/pen/OJmRVPj
+- Moving bookshelf: https://codemyui.com/pure-css-bookshelf-loading-animation/
+- Product description and details: https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155
+- Background images: https://unsplash.com/
+- Youtube videos: https://www.youtube.com/watch?v=AUw7laSlcbo, https://www.youtube.com/watch?v=ChKXTuCBg6U&t=1s
+-->
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHERLOCK</title>
+    <link rel="icon" href="./assets/img/bookstore-logo.png" type="image/png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./section-break.css">
+
+    <!--Import font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+<!--Body section-->
+
+<body>
+    <!--Header section: navigation bar and banner-->
+    <header>
+        <!-- Navigation bar-->
+        <div class="mobile-nav-icon">☰</div>
+        <nav>
+            <!--Logo image-->
+            <div class="store-logo">
+                <img src="./assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./fiction.html">FICTION</a></li>
+                <li><a href="./non-fiction.html">NON-FICTION</a></li>
+                <li><a href="./contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <!--Banner-->
+        <section id="banner">
+            <h1>Sherlock</h1>
+            <h2>Enjoy a new world <br> inside a book</h2>
+            <div class="img-container">
+                <div class="image-cover"></div>
+                <div class="image-cover"></div>
+                <img src="./assets/img/banner-book2.jpg" alt="Book in the banner">
+                <img src="./assets/img/banner-book1.jpg" alt="Book in the banner">
+            </div>
+        </section>
+    </header>
+    <!--Main section: Category and Motivation-->
+    <main>
+        <section id="terms-conditions">
+            <h2>Terms & Condition</h2>
+            <section id="terms">
+                <h3>Terms</h3>
+                <p>
+                    By accessing this website, you are agreeing to be bound by these
+                    website Terms and Conditions of Use, all applicable laws and regulations,
+                    and agree that you are responsible for compliance with any applicable local
+                    laws. If you do not agree with any of these terms, you are prohibited from
+                    using or accessing this site. The materials contained in this website are
+                    protected by applicable copyright and trade mark law.
+                </p>
+            </section>
+            <section id="user-license">
+                <h3>User license</h3>
+                <p>
+                    Permission is granted to temporarily download one copy of the materials
+                    (information or software) on Sherlock website for personal,
+                    non-commercial transitory viewing only. This is the grant of a license,
+                    not a transfer of title, and under this license you may not:
+                </p>
+                <ol>
+                    <li>modify or copy the materials;</li>
+                    <li>use the materials for any commercial purpose, or for any public display 
+                        (commercial or non-commercial);
+                    </li>
+                    <li>remove any copyright or other proprietary notations from the materials; or</li>
+                    <li>transfer the materials to another person or “mirror” the materials on any other server.</li>
+                </ol>
+                <p>
+                    This license shall automatically terminate if you violate any of these restrictions and 
+                    may be terminated by Sherlock at any time. Upon terminating your viewing of these 
+                    materials or upon the termination of this license, you must destroy any downloaded 
+                    materials in your possession whether in electronic or printed format.
+                </p>
+            </section>
+            <section id="disclaimer">
+                <h3>Disclaimer</h3>
+                <p>
+                    The materials on Sherlocks website are provided “as is”. Sherlock makes no warranties, 
+                    expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, 
+                    implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement 
+                    of intellectual property or other violation of rights. Further, Sherlock does not warrant or make 
+                    any representations concerning the accuracy, likely results, or reliability of the use of the materials on 
+                    its Internet website or otherwise relating to such materials or on any sites linked to this site.
+                </p>
+            </section>
+            <section id="limiations">
+                <p>
+                    In no event shall Sherlock or its suppliers be liable for any damages (including, without limitation, 
+                    damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to 
+                    use the materials on Sherlock`s Internet site, even if MarkManson.net or a Sherlock authorized 
+                    representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions 
+                    do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, 
+                    these limitations may not apply to you.
+                </p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section id="aboutus">
+            <div class="store-logo">
+                <img src="./assets/img/bookstore-logo.png" alt="Book store logo">
+                <p>SHERLOCK</p>
+            </div>
+            <div class="aboutus-content">
+                <p>
+                    Established in 2023, Sherlock bookstore's aim is to create a community of book lovers throughout the
+                    nation, especially those who favor crime/detective
+                    novels. There, not only can customers browse for books, but they can also become a member of the
+                    community, where they can build the reading habit and share
+                    feelings through each page of book.
+                </p>
+            </div>
+        </section>
+        <div>
+            <section id="footer-menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="./fiction.html">FICTION</a></li>
+                    <li><a href="./non-fiction.html">NON-FICTION</a></li>
+                    <li><a href="./contact.html">CONTACT US</a></li>
+                    <li><a href="">TERMS & CONDITION</a></li>
+                    <li><a href="">PRIVACY POLICY</a></li>
+                </ul>
+            </section>
+            <section id="connect">
+                <h3>Connect with us</h3>
+                <div class="media-icon">
+                    <img src="./assets/img/facebook.png" alt="Facebook icon">
+                    <img src="./assets/img/youtube.png" alt="Youtube icon">
+                    <img src="./assets/img/instagram.png" alt="Instagram icon">
+                </div>
+                <div class="copyright">
+                    <p>&copy;Copyright by Truong Hong Van 2023</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <a href="#" id="backtotop">
+        <img src="./assets/img/totoparrow.png" alt="back to top arrow">
+    </a>
+    <audio autoplay loop controls src="./assets/audio/background-music.mp3">
+        Your browser does not support audio play
+    </audio>
+</body>
+
+</html>
