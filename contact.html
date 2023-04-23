@@ -25,8 +25,8 @@ Acknowledgement:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHERLOCK</title>
     <link rel="icon" href="./assets/img/bookstore-logo.png" type="image/png">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./section-break.css">
+    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="./style/section-break.css">
 
     <!--Import font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,8 +50,8 @@ Acknowledgement:
             </div>
             <ul>
                 <li><a href="./index.html">HOME</a></li>
-                <li><a href="./fiction.html">FICTION</a></li>
-                <li><a href="./non-fiction.html">NON-FICTION</a></li>
+                <li><a href="./category/fiction.html">FICTION</a></li>
+                <li><a href="./category/non-fiction.html">NON-FICTION</a></li>
                 <li><a href="./contact.html">CONTACT US</a></li>
             </ul>
         </nav>
@@ -76,6 +76,7 @@ Acknowledgement:
         </div>
         <section id="contact-form">
             <form action="data.php" method="post">
+                <!--Personal information-->
                 <fieldset id="info-personal">
                     <legend>Personal information</legend>
                     <div class="form-detail">
@@ -103,6 +104,7 @@ Acknowledgement:
                         <label for="receive-letter">No</label>
                     </div>
                 </fieldset>
+                <!--Contact purpose-->
                 <fieldset id="info-purpose">
                     <legend>Purpose</legend>
                     <div class="form-detail">
@@ -117,6 +119,7 @@ Acknowledgement:
                         <textarea name="extra-notes" id="extra-notes" cols="30" rows="10"></textarea>
                     </div>
                 </fieldset>
+                <!--Submit and reset-->
                 <div class="buttons">
                     <input class="submit" type="submit" value="Submit">
                     <input class="reset" type="reset" value="Reset">
@@ -141,16 +144,18 @@ Acknowledgement:
             </div>
         </section>
         <div>
+            <!--Footer menu-->
             <section id="footer-menu">
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./fiction.html">FICTION</a></li>
-                    <li><a href="./non-fiction.html">NON-FICTION</a></li>
+                    <li><a href="./category/fiction.html">FICTION</a></li>
+                    <li><a href="./category/non-fiction.html">NON-FICTION</a></li>
                     <li><a href="#">CONTACT US</a></li>
-                    <li><a href="">TERMS & CONDITION</a></li>
-                    <li><a href="">PRIVACY POLICY</a></li>
+                    <li><a href="./policy/terms-condition.html">TERMS & CONDITION</a></li>
+                    <li><a href="./policy/privacy-policy.html">PRIVACY POLICY</a></li>
                 </ul>
             </section>
+            <!--Connect wit us-->
             <section id="connect">
                 <h3>Connect with us</h3>
                 <div class="media-icon">
@@ -164,9 +169,11 @@ Acknowledgement:
             </section>
         </div>
     </footer>
+    <!--Back to top arrow-->
     <a href="#" id="backtotop">
         <img src="./assets/img/totoparrow.png" alt="back to top arrow">
     </a>
+    <!--Background music-->
     <audio autoplay loop controls src="./assets/audio/background-music.mp3">
         Your browser does not support audio play
     </audio>

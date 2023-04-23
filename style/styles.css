@@ -152,7 +152,7 @@ nav a:hover {
 
 /* Background */
 #banner {
-  background-image: url(./assets/img/background.jpg);
+  background-image: url(../assets/img/background.jpg);
   height: 800px;
   background-size: cover;
 }
@@ -341,12 +341,12 @@ h2 {
   margin-top: 45%;
   margin-bottom: 15%;
   padding-top: 10%;
-  background: url(./assets/img/cloud-background.jpg);
+  background: url(../assets/img/cloud-background.jpg);
 }
 
 .home-nonfic {
   padding-bottom: 15%;
-  background: url(./assets/img/cloud-background3.jpg);
+  background: url(../assets/img/cloud-background3.jpg);
 }
 
 .category-detail li p {
@@ -483,7 +483,7 @@ h2 {
   height: 450px;
   width: 350px;
   position: absolute;
-  background-image: url(./assets/img/img_cover.png);
+  background-image: url(../assets/img/img_cover.png);
   z-index: 1;
   top: 10px;
   transform: rotate(20deg);
