@@ -824,6 +824,21 @@ legend {
   background-color: var(--pink);
 }
 
+/* Privay and Terms */
+#terms-conditions, #privacy {
+  padding: 100px;
+}
+
+#terms-conditions .content, #privacy .content {
+  padding-top: 50px;
+}
+
+#terms-conditions ol {
+  padding-left: 10%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
 /* Media query: Web layout on mobile devices */
 @media (max-width: 960px) {
   html {
